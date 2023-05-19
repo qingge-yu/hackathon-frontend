@@ -1,4 +1,4 @@
-import styles from './Landing.module.css'
+import styles from './LandingPage.css'
 import Popup from '../../components/Pop-up/modal'
 import Button from 'react-bootstrap/Button';
 import { useState } from "react";
