@@ -1,4 +1,4 @@
-import styles from './Landing.module.css'
+import styles from './LandingPage.css'
 
 const Landing = ({ user }) => {
   return (
