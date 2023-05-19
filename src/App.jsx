@@ -5,7 +5,7 @@ import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 // page components
 import Signup from './pages/SignupPage/SignupPage'
 import Login from './pages/LoginPage/LoginPage'
-import Landing from './pages/LandingPage/LandingPage'
+import Landing from './pages/Landing/Landing'
 import Profiles from './pages/ProfilePage/ProfilePage'
 import ChangePassword from './pages/ChangePasswordPage/ChangePasswordPage'
 
