@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 
-const NavBar = ({ user, handleLogout }) => {
+const NavBar = ({ user, handleLogout, setModalShow}) => {
   return (
     <nav>
       {user ?

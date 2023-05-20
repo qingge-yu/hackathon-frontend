@@ -33,11 +33,13 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} handleLogout={handleLogout}/>
       <Routes>
-        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/" element={<Landing user={user} modalShow={modalShow} setModalShow={setModalShow}/>} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}

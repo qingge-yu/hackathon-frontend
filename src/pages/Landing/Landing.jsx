@@ -1,12 +1,9 @@
 import styles from './Landing.module.css'
 import Popup from '../../components/Pop-up/modal'
 import Button from 'react-bootstrap/Button';
-import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Landing = ({ user }) => {
-
-  const [modalShow, setModalShow] = useState(false);
+const Landing = ({ user, modalShow, setModalShow }) => {
 
 
   return (
