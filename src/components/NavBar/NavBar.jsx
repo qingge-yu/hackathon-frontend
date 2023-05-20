@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-// import * as userService from '../../utilities/users-service'
 import './NavBar.css'
 
 export default function NavBar({ user, setUser, handleLogout }) {
