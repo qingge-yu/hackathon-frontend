@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 import './NavBar.css'
 
-export default function NavBar() {
+export default function NavBar({ setModalShow }) {
 
   const location = useLocation()
   const learnLinkStyle = location.pathname === "/learn" ? "learnSelected" : "navLink"
