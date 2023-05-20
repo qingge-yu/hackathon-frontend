@@ -8,6 +8,8 @@ import Login from './pages/LoginPage/LoginPage'
 import Landing from './pages/LandingPage/LandingPage'
 import Profiles from './pages/ProfilePage/ProfilePage'
 import ChangePassword from './pages/ChangePasswordPage/ChangePasswordPage'
+import LessonsPage from './pages/LessonsPage/LessonsPage'
+import Glossary from './pages/GlossaryPage/Glossary'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -18,7 +20,6 @@ import * as authService from './services/authService'
 
 // styles
 import './App.css'
-import LessonsPage from './pages/LessonsPage/LessonsPage'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -61,6 +62,12 @@ const App = () => {
           path="/learn"
           element={
             <LessonsPage />
+          }
+        />
+        <Route
+          path="/glossary"
+          element={
+            <Glossary />
           }
         />
         <Route
