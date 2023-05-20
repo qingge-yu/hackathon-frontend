@@ -61,7 +61,7 @@ const App = () => {
         <Route
           path="/learn"
           element={
-            <LessonsPage />
+            <LessonsPage modalShow={modalShow} setModalShow={setModalShow}/>
           }
         />
         <Route
