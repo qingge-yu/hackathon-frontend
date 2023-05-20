@@ -24,7 +24,6 @@ const Landing = ({ user, modalShow, setModalShow }) => {
           onHide={() => setModalShow(false)}
         />
       </main>
-        <LessonCarousel />
     </body>
   )
 }
