@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 html, body {
     height: 100%;
 }
@@ -91,3 +87,43 @@ html, body {
 /* --------------- *
  *   APPLICATION   *
  * --------------- */
+h1 {
+    margin: 3rem 0;
+    font-size: clamp(2rem, 4.5vw, 4rem);
+}
+
+input[type=button] {
+    max-width: 10rem;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60rem;
+}
+
+.form-container {
+    height: 80%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.contact-form > input, textarea {
+    margin-bottom: 2rem;
+    border-radius: 0.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.contact-form > label {
+    margin-bottom: 0.25rem;
+}
+
+.contact-form {
+    max-width: 30rem;
+    width: 100%;
+}
+
+#message, input {
+    padding: .75rem;
+    resize: none;
+}
