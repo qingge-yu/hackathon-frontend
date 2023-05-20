@@ -11,13 +11,13 @@ export default function NavBar({ setModalShow }) {
       <h1 className='navigaedu'>navigat<b style={{ color: "#3476EF" }}>edu</b></h1>
       <ul className="navBarList">
         <li><NavLink to="/learn" className={({ isActive }) =>
-          isActive ? "linkStyle" : "navBarList"}>Learn</NavLink></li>
+          isActive ? "linkStyle learnActive" : "navBarList"}>Learn</NavLink></li>
         <li><NavLink to="/glossary" className={({ isActive }) =>
-          isActive ? "linkStyle" : "navBarList"}>Glossary</NavLink></li>
+          isActive ? "linkStyle glossaryActive" : "navBarList"}>Glossary</NavLink></li>
         <li><NavLink to="/about" className={({ isActive }) =>
-          isActive ? "linkStyle" : "navBarList"}>About</NavLink></li>
+          isActive ? "linkStyle aboutActive" : "navBarList"}>About</NavLink></li>
         <li><NavLink to="/contact" className={({ isActive }) =>
-          isActive ? "linkStyle" : "navBarList"}>Contact</NavLink></li>
+          isActive ? "linkStyle contactActive" : "navBarList"}>Contact</NavLink></li>
       </ul>
       <div></div>
       <LanguageMenu />
