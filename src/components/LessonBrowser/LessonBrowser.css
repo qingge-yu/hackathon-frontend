@@ -101,7 +101,7 @@ html {
   align-items: center;
 }
 
-.window button, input[type="text"] {
+.window button, .browserText {
   padding: .5rem;
   
   background: none;
@@ -173,7 +173,7 @@ html {
   position: relative;
 }
 
-input[type="text"] {
+.browserText {
   font-family: inherit;
   font-size: .75rem;
   line-height: 1.5;
