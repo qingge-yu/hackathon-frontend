@@ -89,7 +89,7 @@ html, body {
  * --------------- */
 h1 {
     margin: 3rem 0;
-    font-size: clamp(2rem, 4.5vw, 2rem) !important;
+    font-size: clamp(2rem, 4.5vw, 3rem) !important;
     text-align: left;
 }
 
