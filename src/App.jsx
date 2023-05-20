@@ -18,6 +18,7 @@ import * as authService from './services/authService'
 
 // styles
 import './App.css'
+import LessonsPage from './pages/LessonsPage/LessonsPage'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -54,6 +55,12 @@ const App = () => {
             <ProtectedRoute user={user}>
               <Profiles />
             </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/learn"
+          element={
+            <LessonsPage />
           }
         />
         <Route
