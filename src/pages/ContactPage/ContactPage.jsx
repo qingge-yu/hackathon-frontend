@@ -6,7 +6,7 @@ const Contact = () => {
         <section className="content-container">
             <div></div>
             <div className="form-container">
-                <h1>Send us a Message!</h1>
+                <h1 className='contact'>Send us a Message!</h1>
                 <form action="" className="contact-form flex column">
                     <label htmlFor="name">Name</label>
                     <input type="text" name="name" id="name" placeholder="John Doe"/>

@@ -87,13 +87,13 @@ html, body {
 /* --------------- *
  *   APPLICATION   *
  * --------------- */
-h1 {
+h1.contact {
     margin: 3rem 0;
     font-size: clamp(2rem, 4.5vw, 3rem) !important;
     text-align: left;
 }
 
-input[type=button] {
+.contact-form > input[type=button] {
     max-width: 10rem;
 }
 
@@ -127,7 +127,7 @@ section.content-container {
     width: 100%;
 }
 
-#message, input {
+#message, .contact-form > input {
     padding: .75rem;
     resize: none;
 }
