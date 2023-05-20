@@ -2,6 +2,7 @@ import styles from './LandingPage.css'
 import Popup from '../../components/Pop-up/modal'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LessonCarousel from '../../components/LessonCarousel/Carousel';
 
 const Landing = ({ user, modalShow, setModalShow }) => {
 
@@ -22,8 +23,8 @@ const Landing = ({ user, modalShow, setModalShow }) => {
           show={modalShow}
           onHide={() => setModalShow(false)}
         />
-        {/* <h1>hi {user ? user.name : 'friend'}</h1> */}
       </main>
+        <LessonCarousel />
     </body>
   )
 }
