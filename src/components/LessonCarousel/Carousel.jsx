@@ -1,33 +1,56 @@
 import './Carousel.css'
-import { useState} from "react";
+import { useState } from "react";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
-const Carousel = () => {
-  const [lessonPage, setLessonPage] = useState(1)
 
-  function handleCountMinus() {
-    if (lessonPage > 1) {
-      setLessonPage(lessonPage - 1)
-    } else {
-      setLessonPage(9)
-    }
+const LessonCarousel = () => {
+
+  const [lessonNum, setLessonNum] = useState(1)
+
+  const buttons = [1,2,3,4,5,6,7,8,9]
+  function handleLessonClick(name) {
+    setLessonNum(name)
+    console.log(lessonNum)
   }
 
-  function handleCountPlus() {
-    if (lessonPage < 9) {
-      setLessonPage(lessonPage + 1)
-    } else {
-      setLessonPage(1)
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1500 },
+      items: 5
+    },
+    tablet: {
+      breakpoint: { max: 1500, min: 464 },
+      items: 3
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
     }
-  }
+  };
 
 
   return ( 
-    <div className='lessonCarouselBtn'>
-        <button onClick={handleCountMinus}> Lesson {lessonPage === 1 ? 9 :(lessonPage - 1)} </button>
-        <p> Lesson {lessonPage}</p>
-        <button onClick={handleCountPlus}> Lesson {lessonPage === 9 ? 1 : lessonPage + 1} </button>
-    </div>
-   );
+    <>
+      <div className='carouselContainer'>
+        <Carousel className='carousel' responsive={responsive}>
+          {buttons.map(function(name) {
+            return <input
+                      type='button'
+                      id='lessonButton'
+                      className={lessonNum === name ? 'active' : 'inactive'}
+                      value= {`Lesson ${name}`}
+                      onClick={() => handleLessonClick(name)}
+                      key={ name } />
+          })}
+        </Carousel>
+      </div>
+    </>
+   )
 }
  
-export default Carousel;
+export default LessonCarousel;
