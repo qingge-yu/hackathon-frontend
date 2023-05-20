@@ -71,6 +71,12 @@ const App = () => {
           }
         />
         <Route
+          path="/"
+          element={
+            <Landing />
+          }
+        />
+        <Route
           path="/change-password"
           element={
             <ProtectedRoute user={user}>

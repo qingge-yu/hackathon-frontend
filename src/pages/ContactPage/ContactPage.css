@@ -97,7 +97,7 @@ input[type=button] {
     max-width: 10rem;
 }
 
-.content-container {
+section.content-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 60rem;
