@@ -7,6 +7,7 @@ import Signup from './pages/SignupPage/SignupPage'
 import Login from './pages/LoginPage/LoginPage'
 import Landing from './pages/LandingPage/LandingPage'
 import Profiles from './pages/ProfilePage/ProfilePage'
+import Contact from './pages/ContactPage/ContactPage'
 import ChangePassword from './pages/ChangePasswordPage/ChangePasswordPage'
 
 // components
@@ -61,6 +62,18 @@ const App = () => {
           path="/learn"
           element={
             <LessonsPage />
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Contact />
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <Landing />
           }
         />
         <Route

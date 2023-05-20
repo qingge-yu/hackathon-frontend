@@ -1,32 +1,25 @@
-import { Link, useLocation } from 'react-router-dom'
+import * as React from 'react';
+import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import './NavBar.css'
+import LanguageMenu from '../LanguageMenu/LanguageMenu'
 
 export default function NavBar({ setModalShow }) {
 
-  const location = useLocation()
-  const learnLinkStyle = location.pathname === "/learn" ? "learnSelected" : "navLink"
-  const glossaryLinkStyle = location.pathname === "/glossary" ? "glossarySelected" : "navLink"
-  const aboutLinkStyle = location.pathname === "/about" ? "aboutSelected" : "navLink"
-  const contactLinkStyle = location.pathname === "/contact" ? "contactSelected" : "navLink"
-
   return (
     <nav className='navBar'>
-      <h3 className='name'>navigat<b>edu</b></h3>
-      <ul className='navBarList'>
-        <li><Link to="/learn" className={learnLinkStyle}>Learn</Link></li>
-        <li><Link to="/glossary" className={glossaryLinkStyle}>Glossary</Link></li>
-        <li><Link to="/about" className={aboutLinkStyle}>About</Link></li>
-        <li><Link to="/contact" className={contactLinkStyle}>Contact</Link></li>
+      <h1 className='navigaedu'>navigat<b style={{ color: "#3476EF" }}>edu</b></h1>
+      <ul className="navBarList">
+        <li><NavLink to="/learn" className={({ isActive }) =>
+          isActive ? "linkStyle" : "navBarList"}>Learn</NavLink></li>
+        <li><NavLink to="/glossary" className={({ isActive }) =>
+          isActive ? "linkStyle" : "navBarList"}>Glossary</NavLink></li>
+        <li><NavLink to="/about" className={({ isActive }) =>
+          isActive ? "linkStyle" : "navBarList"}>About</NavLink></li>
+        <li><NavLink to="/contact" className={({ isActive }) =>
+          isActive ? "linkStyle" : "navBarList"}>Contact</NavLink></li>
       </ul>
-      <select>
-        <option value="english">English</option>
-        <option value="es">Spanish</option>
-        <option value="zh-CN">Chinese</option>
-        <option value="tl">Tagalog</option>
-        <option value="vi">Vietnamese</option>
-        <option value="fr">French</option>
-      </select>
-    </nav>
+      <LanguageMenu />
+    </nav >
   )
 }
