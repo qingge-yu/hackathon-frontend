@@ -24,6 +24,7 @@ export default function BasicSelect() {
                     onChange={handleChange}
                 >
                     <MenuItem value="english">English</MenuItem>
+                    <MenuItem value="es">Español</MenuItem>
                     <MenuItem value="ar">عربي</MenuItem>
                     <MenuItem value="ja">日本語</MenuItem>
                     <MenuItem value="fr">Français</MenuItem>
