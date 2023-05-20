@@ -1,4 +1,4 @@
-import styles from './LandingPage.css'
+import './LandingPage.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Landing = () => {

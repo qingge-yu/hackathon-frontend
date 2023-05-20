@@ -3,6 +3,7 @@ import styles from './LessonsPage.css'
 import Popup from '../../components/Pop-up/modal'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LessonBrowser from "../../components/LessonBrowser/LessonBrowser";
 
 const LessonsPage = ({ user, modalShow, setModalShow }) => {
 
@@ -16,14 +17,15 @@ const LessonsPage = ({ user, modalShow, setModalShow }) => {
         crossorigin="anonymous"
       />
       <main className={styles.container}>
-        <Button variant="primary" onClick={() => setModalShow(true)}>
+        {/* <Button variant="primary" onClick={() => setModalShow(true)}>
           Launch vertically centered modal
         </Button>
         <Popup
           show={modalShow}
           onHide={() => setModalShow(false)}
-        />
+        /> */}
         <LessonCarousel />
+        <LessonBrowser />
       </main>
     </body>
   )
