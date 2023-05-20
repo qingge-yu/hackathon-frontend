@@ -34,19 +34,10 @@
     color: black;
 }
 
-.navLink:hover {
-    color: black;
-    font-weight: bold;
-}
-
 .learnSelected {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-
-.learnSelected:hover {
-    color: black;
 }
 
 .glossarySelected {
@@ -55,26 +46,14 @@
     font-weight: bold;
 }
 
-.glossarySelected:hover {
-    color: black;
-}
-
 .aboutSelected {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-.aboutSelected:hover {
-    color: black;
-}
-
 .contactSelected {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-
-.contactSelected:hover {
-    color: black;
 }
