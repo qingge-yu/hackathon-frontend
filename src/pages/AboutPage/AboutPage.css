@@ -1,0 +1,26 @@
+.aboutPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.aboutBG {
+    position: absolute;
+    width: 1120px;
+    left: calc(50% - 1120px/2 + 13px);
+    top: 32.81%;
+    bottom: -39.65%;
+    z-index: -1;
+}
+
+.aboutPage>h1 {
+    margin-top: 100px;
+}
+
+.aboutPage>p {
+    margin-top: 400px;
+    width: 360px;
+    font-weight: 500;
+}
