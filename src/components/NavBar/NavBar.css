@@ -60,13 +60,53 @@
 }
 
 
-.linkStyle::after {
+/* .linkStyle::after {
     position: absolute;
     content: "";
     border-top: .17rem solid black;
     width: 2.5rem;
     display: inline-block;
     transform: translate(-2.5rem, 1.7rem);
+    line-height: 0;
+} */
+
+.learnActive::after {
+    position: absolute;
+    content: "";
+    border-top: .17rem solid black;
+    width: 2.7rem;
+    display: inline-block;
+    transform: translate(-2.6rem, 1.7rem);
+    line-height: 0;
+}
+
+.glossaryActive::after {
+    position: absolute;
+    content: "";
+    border-top: .17rem solid black;
+    width: 4rem;
+    display: inline-block;
+    transform: translate(-4rem, 1.7rem);
+    line-height: 0;
+}
+
+.aboutActive::after {
+    position: absolute;
+    content: "";
+    border-top: .17rem solid black;
+    width: 3rem;
+    display: inline-block;
+    transform: translate(-2.8rem, 1.7rem);
+    line-height: 0;
+}
+
+.contactActive::after {
+    position: absolute;
+    content: "";
+    border-top: .17rem solid black;
+    width: 3.6rem;
+    display: inline-block;
+    transform: translate(-3.5rem, 1.7rem);
     line-height: 0;
 }
 

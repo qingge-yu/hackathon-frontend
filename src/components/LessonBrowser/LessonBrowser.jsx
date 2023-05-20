@@ -60,7 +60,7 @@ const LessonBrowser = (props) => {
       </svg>
     </button>
     <div class="search">
-      <input type="text" placeholder="Search with QuackQuackGo or enter address"/>
+      <input className='browserText' type="text" placeholder="Search with QuackQuackGo or enter address"/>
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
         <path d="M8.15613 14.0625C11.4181 14.0625 14.0624 11.4182 14.0624 8.15625C14.0624 4.89432 11.4181 2.25 8.15613 2.25C4.8942 2.25 2.24988 4.89432 2.24988 8.15625C2.24988 11.4182 4.8942 14.0625 8.15613 14.0625Z" stroke="var(--cream-0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         <path d="M12.3323 12.3329L15.7495 15.7501" stroke="var(--cream-0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
