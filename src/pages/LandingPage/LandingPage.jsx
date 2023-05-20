@@ -1,10 +1,7 @@
 import styles from './LandingPage.css'
-import Popup from '../../components/Pop-up/modal'
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import LessonCarousel from '../../components/LessonCarousel/Carousel';
 
-const Landing = ({ user, modalShow, setModalShow }) => {
+const Landing = () => {
 
 
   return (
@@ -15,15 +12,6 @@ const Landing = ({ user, modalShow, setModalShow }) => {
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
         crossorigin="anonymous"
       />
-      <main className={styles.container}>
-        <Button variant="primary" onClick={() => setModalShow(true)}>
-          Launch vertically centered modal
-        </Button>
-        <Popup
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-        />
-      </main>
     </body>
   )
 }
