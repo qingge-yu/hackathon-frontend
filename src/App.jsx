@@ -5,7 +5,7 @@ import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 // page components
 import Signup from './pages/SignupPage/SignupPage'
 import Login from './pages/LoginPage/LoginPage'
-import Landing from './pages/Landing/Landing'
+import Landing from './pages/LandingPage/LandingPage'
 import Profiles from './pages/ProfilePage/ProfilePage'
 import ChangePassword from './pages/ChangePasswordPage/ChangePasswordPage'
 
@@ -33,11 +33,13 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} handleLogout={handleLogout}/>
       <Routes>
-        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/" element={<Landing user={user} modalShow={modalShow} setModalShow={setModalShow}/>} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
