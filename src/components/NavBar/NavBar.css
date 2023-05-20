@@ -1,54 +1,24 @@
-a {
-    display: block;
-    padding: 10px 40px;
+
+.learnSelected {
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: bold;
-    line-height: 5em;
     color: black;
 }
 
-.navBar {
-    position: fixed;
+.glossarySelected {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
-.menuNav {
-    list-style: none;
-    position: fixed;
-    height: 100vh;
-    width: 0;
-    overflow: hidden;
-    max-width: 290px;
-    z-index: 9;
-    padding-left: 0;
-    border-right: 1px solid black;
+.aboutSelected {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
-.menuNav.showMenu {
-    width: 100%;
-    margin: 0;
-}
-
-.navBar button {
-    position: fixed;
-    /* left: -1vh;
-    top: -1vh; */
-    z-index: 10;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-}
-
-.navBar img {
-    width: 30px;
-}
-
-.menuNav li:first-child {
-    margin-top: 7rem;
-    margin-bottom: 1rem;
-}
-
-.navLink:hover {
-    text-shadow: 4px 4px 10px rgb(188, 191, 188);
-    font-size: 1.2em;
+.contactSelected {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
