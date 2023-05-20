@@ -90,6 +90,7 @@ html, body {
 h1 {
     margin: 3rem 0;
     font-size: clamp(2rem, 4.5vw, 4rem);
+    text-align: left;
 }
 
 input[type=button] {
@@ -100,6 +101,8 @@ input[type=button] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 60rem;
+    background: radial-gradient(circle, #1c1a1aaf 30%, transparent 20%) -40rem 20rem no-repeat,
+    linear-gradient(-20deg, transparent 80%, #87878780 10%);
 }
 
 .form-container {
