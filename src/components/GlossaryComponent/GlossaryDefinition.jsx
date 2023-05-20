@@ -5,7 +5,7 @@ const GlossaryDefinition = (props) => {
         Browser: "A software Program that lets you view web pages on your computer.",
         URL: "Universal ",
         Hyperlink: "",
-        SearchEngine: ""
+        "Search Engine": "Hello"
     }
 
     return (
