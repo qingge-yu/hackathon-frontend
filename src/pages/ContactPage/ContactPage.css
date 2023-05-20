@@ -50,6 +50,7 @@ html, body {
     display: flex;
 }
 
+
 .flex.column {
     flex-direction: column;
 }
@@ -87,22 +88,34 @@ html, body {
 /* --------------- *
  *   APPLICATION   *
  * --------------- */
-h1.contact {
-    margin: 3rem 0;
-    font-size: clamp(2rem, 4.5vw, 3rem) !important;
+h2.contact {
+    margin: 2rem 0;
+    /* font-size: clamp(2rem, 4.5vw, 3rem) !important; */
     text-align: left;
+    font-weight: 600;
 }
 
-.contact-form > input[type=button] {
+.contact-form>input[type=button] {
     max-width: 10rem;
 }
 
 section.content-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 60rem;
-    background: radial-gradient(circle, #1c1a1aaf 30%, transparent 20%) -40rem 20rem no-repeat,
-    linear-gradient(-20deg, transparent 80%, #87878780 10%);
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contactBG {
+    position: absolute;
+    width: 1068px;
+    left: calc(50% - 1068px/2 - 4px);
+    top: 9.28%;
+    bottom: 5.27%;
+    z-index: -1;
 }
 
 .form-container {
@@ -112,26 +125,48 @@ section.content-container {
     grid-template-rows: auto 1fr;
 }
 
-.contact-form > input, textarea {
-    margin-bottom: 2rem;
-    border-radius: 0.2rem;
+.contact-form>input, textarea {
+    margin-bottom: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.contact-form > label {
+.contact-form>label {
     margin-bottom: 0.25rem;
 }
 
 .contact-form {
-    max-width: 30rem;
+    height: 30rem;
+    max-width: 50rem;
     width: 100%;
 }
 
-#message, .contact-form > input {
-    padding: .75rem;
-    resize: none;
+.contactBtn {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    max-width: 8rem;
+    margin: auto;
+}
+
+.directoryPath {
+    position: absolute;
+    left: 7%;
+    top: 13%;
+}
+
+.homeLink {
+    text-decoration: none;
+    color: black;
+}
+
+.homeLink:hover {
+    text-decoration: underline;
+    color: black;
 }
 
 #message {
+    padding: .75rem;
+    resize: none;
     margin-bottom: 2rem;
 }
