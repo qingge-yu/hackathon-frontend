@@ -1,10 +1,9 @@
 import styles from './LandingPage.css'
 import Popup from '../../components/Pop-up/modal'
 import Button from 'react-bootstrap/Button';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from '../../components/LessonCarousel/Carousel'
 
 const Landing = ({ user, modalShow, setModalShow }) => {
-
 
   return (
     <body>
