@@ -1,9 +1,112 @@
-.container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+/* ------------- *
+ *   CSS Reset   *
+ * ------------- */
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-  text-align: center;
+html, body {
+    height: 100%;
+}
+
+/* ---------- *
+ *   GLOBAL   *
+ * ---------- */
+:root {
+    /* background colors */
+
+    /* other colors */
+    --white-col: white;
+}
+
+/* ----------- *
+ *   UTILITY   *
+ * ----------- */
+p {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.height-full {
+    height: 100%;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.borderless {
+    border: none !important;
+}
+
+.outlineless {
+    outline: none;
+}
+
+/* -------- *
+ *   FLEX   *
+ * -------- */
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.grow-1 {
+    flex-grow: 1;
+}
+
+.flex.align-space-between {
+    align-items: space-between;
+}
+
+/* -------- *
+ *   GRID   *
+ * -------- */
+.grid {
+    display: grid;
+}
+
+/* --------------- *
+ *   FLEX / GRID   *
+ * --------------- */
+.align-center:is(.flex, .grid) {
+    align-items: center;
+}
+
+.justify-center:is(.flex, .grid) {
+    justify-content: center;
+}
+
+/* --------------- *
+ *   APPLICATION   *
+ * --------------- */
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60rem;
+    background: radial-gradient(circle, #1c1a1aaf 50%, transparent 20%) -10rem 20rem no-repeat,
+    linear-gradient(35deg, transparent 70%, #87878780 20%);
+}
+
+.landing-about {
+    padding: 10rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.learn {
+    background-color: rgb(174, 174, 174);
+    max-width: 7rem;
+    padding: 0.3rem;
+    border: none;
+    border-radius: .25rem;
+    color: white;
 }

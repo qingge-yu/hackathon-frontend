@@ -7,6 +7,8 @@ import Signup from './pages/SignupPage/SignupPage'
 import Login from './pages/LoginPage/LoginPage'
 import Landing from './pages/LandingPage/LandingPage'
 import Profiles from './pages/ProfilePage/ProfilePage'
+import Contact from './pages/ContactPage/ContactPage'
+import About from './pages/AboutPage/AboutPage'
 import ChangePassword from './pages/ChangePasswordPage/ChangePasswordPage'
 import LessonsPage from './pages/LessonsPage/LessonsPage'
 import Glossary from './pages/GlossaryPage/Glossary'
@@ -39,9 +41,9 @@ const App = () => {
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout}/>
+      <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing user={user}/>} />
+        <Route path="/" element={<Landing user={user} modalShow={modalShow} setModalShow={setModalShow} />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
@@ -68,6 +70,24 @@ const App = () => {
           path="/glossary"
           element={
             <Glossary />
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Contact />
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <About />
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <Landing />
           }
         />
         <Route

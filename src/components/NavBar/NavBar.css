@@ -8,8 +8,8 @@
     padding-right: 5vw;
 }
 
-.name {
-    font-family: 'Poppins', sans-serif;
+.navigatedu {
+    font-family: 'Roboto', sans-serif;
     color: black;
 }
 
@@ -21,59 +21,55 @@
 }
 
 .navBarList {
+    font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     list-style-type: none;
-    width: 50%;
+    text-decoration: none;
+    color: black;
+    width: 30%;
     margin: 0;
     padding: 0;
 }
 
-.navLink {
-    text-decoration: none;
+.navBarList:hover {
     color: black;
 }
 
-.navLink:hover {
-    color: black;
+.navBarList>* {
+    width: 100%;
+    max-width: fit-content;
+    align-items: center;
+    justify-content: center;
 }
 
-.learnSelected {
+.navBarList>li {
+    height: 100%;
+    width: 100%;
+}
+
+.linkStyle {
     text-decoration: none;
     font-weight: bold;
     color: black;
 }
 
-.learnSelected:hover {
+.linkStyle:hover {
     color: black;
 }
 
-.glossarySelected {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+
+.linkStyle::after {
+    position: absolute;
+    content: "";
+    border-top: .17rem solid black;
+    width: 2.5rem;
+    display: inline-block;
+    transform: translate(-2.5rem, 1.7rem);
+    line-height: 0;
 }
 
-.glossarySelected:hover {
-    color: black;
-}
-
-.aboutSelected {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-.aboutSelected:hover {
-    color: black;
-}
-
-.contactSelected {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-.contactSelected:hover {
-    color: black;
+.navBar>div {
+    width: 20%;
 }
