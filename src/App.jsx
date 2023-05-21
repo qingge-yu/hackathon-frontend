@@ -28,7 +28,7 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const [modalShow, setModalShow] = useState(false);
   const [Data, setData] = useState();
-  const [language, setLanguage] = useState('english');
+  const [language, setLanguage] = useState('en');
 
   const navigate = useNavigate()
 
@@ -42,14 +42,15 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  const URL = "http://localhost:4000/data/"
+  const URL = "http://localhost:4000/"
 
   const getData = async () => {
-    const response = await fetch(URL);
+    const response = await fetch(URL+language);
     const data = await response.json();
     setData(data);
 };
-  
+
+
   let trigger = useMemo(() => ({language}), [language]);
   useEffect(()=> {getData()}, [trigger])
 
