@@ -17,7 +17,7 @@ export default function NavBar({ setModalShow, language, setLanguage, data }) {
         <li><NavLink to="/contact" className={({ isActive }) =>
           isActive ? "linkStyle contactActive" : "navBarList"}>Contact</NavLink></li>
       </ul>
-      <div>{data[0].Data}</div>
+      <div></div>
       <LanguageMenu language={language} setLanguage={setLanguage} />
     </nav >
   )

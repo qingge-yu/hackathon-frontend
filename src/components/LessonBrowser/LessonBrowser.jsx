@@ -4,15 +4,15 @@ const LessonBrowser = (props) => {
   return ( 
     <div className='browserbody'>
     
-<div class="window">
-  <header class="windowheader">
-    <div class="window-actions">
+<div className="window">
+  <header className="windowheader">
+    <div className="window-actions">
       <button aria-label="close"></button>
       <button aria-label="minimize"></button>
       <button aria-label="maximize"></button>
     </div>
-    <div class="tabs">
-      <div class="tab">
+    <div className="tabs">
+      <div className="tab">
         <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
           <circle cx="9" cy="9" r="9" fill="var(--red-0)"></circle>
           <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="var(--orange-0)"></path>
@@ -33,7 +33,7 @@ const LessonBrowser = (props) => {
       </button>
     </div>
   </header>
-  <nav class="toolbar">
+  <nav className="toolbar">
     <button aria-label="go back">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
         <path d="M15.1875 9H2.8125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -59,7 +59,7 @@ const LessonBrowser = (props) => {
         <path d="M10.6863 15.1869V11.2494C10.6863 11.1002 10.627 10.9571 10.5215 10.8516C10.416 10.7462 10.273 10.6869 10.1238 10.6869H7.87378C7.7246 10.6869 7.58152 10.7462 7.47603 10.8516C7.37054 10.9571 7.31128 11.1002 7.31128 11.2494V15.1869" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
     </button>
-    <div class="search">
+    <div className="search">
       <input className='browserText' type="text" placeholder="Search with QuackQuackGo or enter address"/>
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
         <path d="M8.15613 14.0625C11.4181 14.0625 14.0624 11.4182 14.0624 8.15625C14.0624 4.89432 11.4181 2.25 8.15613 2.25C4.8942 2.25 2.24988 4.89432 2.24988 8.15625C2.24988 11.4182 4.8942 14.0625 8.15613 14.0625Z" stroke="var(--cream-0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>

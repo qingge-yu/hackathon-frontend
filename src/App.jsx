@@ -42,7 +42,7 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  const URL = "http://localhost:4000/"
+  const URL = "https://navigatedu-api.herokuapp.com/"
 
   const getData = async () => {
     const response = await fetch(URL+language);
@@ -120,6 +120,7 @@ const App = () => {
   )
   }
   return Data ? AppRender() : console.log("loading")
+  // return AppRender()
 }
 
 export default App
