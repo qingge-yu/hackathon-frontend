@@ -1,6 +1,7 @@
 import './LessonBrowser.css'
 
 const LessonBrowser = (props) => {
+  console.log(props)
   return ( 
     <div className='browserbody'>
     
@@ -70,7 +71,7 @@ const LessonBrowser = (props) => {
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
         <path d="M9 5.625H15.1875C15.3367 5.625 15.4798 5.68426 15.5852 5.78975C15.6907 5.89524 15.75 6.03832 15.75 6.1875V14.0625C15.75 14.2117 15.6907 14.3548 15.5852 14.4602C15.4798 14.5657 15.3367 14.625 15.1875 14.625H2.8125C2.66345 14.6246 2.52063 14.5652 2.41523 14.4598C2.30984 14.3544 2.25044 14.2116 2.25 14.0625V7.3125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         <path d="M6.5625 7.3125H2.25V4.5C2.25 4.35082 2.30926 4.20774 2.41475 4.10225C2.52024 3.99676 2.66332 3.9375 2.8125 3.9375H6.5625C6.68421 3.9375 6.80263 3.97697 6.9 4.05L9 5.625L6.9 7.2C6.80263 7.27303 6.68421 7.3125 6.5625 7.3125Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>Hacks
+      </svg>
     </button>
     <button aria-label="downloads">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">

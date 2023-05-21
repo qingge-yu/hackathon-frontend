@@ -12,21 +12,39 @@
 
 #lessonButton {
   background-color: white;
-  line-height: 51px;
+  line-height: 40px;
   border: none;
+}
+
+.lessonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90px;
 }
 
 .inactive {
-  font-size: clamp(20px, 30px, 40px);
-  color: rgb(172, 127, 127);
+  font-size: clamp(20px, 24px, 28px);
+  color: rgba(29, 27, 32, 1);
   padding: 0;
   border: none;
+  font-weight: 400;
 }
 
-.active {
-  color: black;
-  font-weight: 600;
+.carouselContainer .active {
+  color: rgba(29, 27, 32, 1);
   animation: activeAnimation 500ms forwards;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+#carouselP {
+  margin: .25rem;
+  line-height: 35px;
+}
+
+.activeP {
+  animation: activeAnimationP 500ms forwards;
 }
 
 @keyframes activeAnimation {
@@ -35,6 +53,14 @@
   }
   100% {
     font-size: clamp(30px, 40px, 50px);
+  }
+}
+@keyframes activeAnimationP {
+  0% {
+    font-size: clamp(10px, 16px, 22px);
+  }
+  100% {
+    font-size: clamp(11px, 17px, 23px);
   }
 }
 

@@ -56,8 +56,13 @@
     color: black;
 }
 
-.linkStyle:hover {
+.linkStyle:hover, .navigateHome:hover {
     color: black;
+}
+
+.navigateHome {
+    color: inherit;
+    text-decoration: none;
 }
 
 
