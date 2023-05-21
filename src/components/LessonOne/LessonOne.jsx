@@ -1,7 +1,7 @@
 import { LessonOneData } from "./LessonOneData";
 import './LessonOne.css'
 
-const LessonOne = () => {
+const LessonOneSlides = () => {
   return ( 
     <div className="lessonOneContainer">
     {LessonOneData[0].image}
@@ -9,4 +9,4 @@ const LessonOne = () => {
    );
 }
  
-export default LessonOne;
+export default LessonOneSlides;
