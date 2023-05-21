@@ -3,24 +3,33 @@ import { useState, useEffect } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import LessonBrowser from '../LessonBrowser/LessonBrowser';
+import LessonOne from '../LessonList/Lesson1';
+import LessonTwo from '../LessonList/Lesson2';
+import LessonThree from '../LessonList/Lesson3';
+import LessonFour from '../LessonList/Lesson4';
+import LessonFive from '../LessonList/Lesson5';
+import LessonSix from '../LessonList/Lesson6';
+import LessonSeven from '../LessonList/Lesson7';
+import LessonEight from '../LessonList/Lesson8';
+import LessonNine from '../LessonList/Lesson9';
 
 
 const LessonCarousel = ({ user, modalShow, setModalShow }) => {
 
   const [lessonNum, setLessonNum] = useState(1)
-  const [lessonOne, setLessonOne] = useState(true)
+  // const [lessonDisplay, setLessonDisplay] = useState(1)
 
-  const buttons = [1,2,3,4,5,6,7,8,9]
+  // const buttons = [1,2,3,4,5,6,7,8,9]
   function handleLessonClick(name) {
     setLessonNum(name)
     console.log(lessonNum)
   }
 
-  useEffect(() => { 
-    if (lessonNum === 1) {
-      setLessonOne(true)
-    } else setLessonOne(false)
-  }, [lessonNum])
+  // useEffect(() => { 
+  //   if (lessonNum === 1) {
+  //     setLessonDisplay(1)
+  //   } else setLessonDisplay(2)
+  // }, [lessonNum])
 
   const responsive = {
     superLargeDesktop: {
@@ -105,7 +114,7 @@ const LessonCarousel = ({ user, modalShow, setModalShow }) => {
             value= {`Lesson 6`}
             onClick={() => handleLessonClick(6)} 
           />
-          <p id='carouselP' className={lessonNum === 6 ? 'activeP' : 'inactiveP'}>Online Job Search</p>
+          <p id='carouselP' className={lessonNum === 6 ? 'activeP' : 'inactiveP'}>Connect With Others</p>
           </div>
           <div className='lessonContainer'>
           <input
@@ -115,7 +124,7 @@ const LessonCarousel = ({ user, modalShow, setModalShow }) => {
             value= {`Lesson 7`}
             onClick={() => handleLessonClick(7)} 
           />
-          <p id='carouselP' className={lessonNum === 7 ? 'activeP' : 'inactiveP'}>Internet History</p>
+          <p id='carouselP' className={lessonNum === 7 ? 'activeP' : 'inactiveP'}>Online Fraud & Scams</p>
           </div>
           <div className='lessonContainer'>
           <input
@@ -125,7 +134,7 @@ const LessonCarousel = ({ user, modalShow, setModalShow }) => {
             value= {`Lesson 8`}
             onClick={() => handleLessonClick(8)} 
           />
-          <p id='carouselP' className={lessonNum === 8 ? 'activeP' : 'inactiveP'}>Computer Components</p>
+          <p id='carouselP' className={lessonNum === 8 ? 'activeP' : 'inactiveP'}>Files and Folders</p>
           </div>
           <div className='lessonContainer'>
           <input
@@ -135,21 +144,19 @@ const LessonCarousel = ({ user, modalShow, setModalShow }) => {
             value= {`Lesson 9`}
             onClick={() => handleLessonClick(9)} 
           />
-          <p id='carouselP' className={lessonNum === 9 ? 'activeP' : 'inactiveP'}>Typing Tutorial</p>
+          <p id='carouselP' className={lessonNum === 9 ? 'activeP' : 'inactiveP'}>Downloads</p>
           </div>
-
-          {/* {buttons.map(function(name) {
-            return <input
-                      type='button'
-                      id='lessonButton'
-                      className={lessonNum === name ? 'active' : 'inactive'}
-                      value= {`Lesson ${name}`}
-                      onClick={() => handleLessonClick(name)}
-                      key={ name } />
-          })} */}
         </Carousel>
       </div>
-      {lessonOne ? (<LessonBrowser modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+      {lessonNum === 1 ? (<LessonOne modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+      {lessonNum === 2 ? (<LessonTwo modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+      {lessonNum === 3 ? (<LessonThree modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+      {lessonNum === 4 ? (<LessonFour modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+      {lessonNum === 5 ? (<LessonFive modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+      {lessonNum === 6 ? (<LessonSix modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+      {lessonNum === 7 ? (<LessonSeven modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+      {lessonNum === 8 ? (<LessonEight modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+      {lessonNum === 9 ? (<LessonNine modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
     </>
    )
 }
