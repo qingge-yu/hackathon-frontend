@@ -1,101 +1,43 @@
-/* ------------- *
- *   CSS Reset   *
- * ------------- */
- *, *::before, *::after {
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html, body {
+.glossary-container {
+    font-family: 'Roboto', sans-serif;
     height: 100%;
-}
-
-/* ---------- *
- *   GLOBAL   *
- * ---------- */
-:root {
-    /* background colors */
-
-    /* other colors */
-    --white-col: white;
-}
-
-/* ----------- *
- *   UTILITY   *
- * ----------- */
-.height-full {
-    height: 100%;
-}
-
-.width-full {
     width: 100%;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.borderless {
-    border: none !important;
-}
-
-.outlineless {
-    outline: none;
-}
-
-/* -------- *
- *   FLEX   *
- * -------- */
-.flex {
-    display: flex;
-}
-
-.flex.column {
-    flex-direction: column;
-}
-
-.flex.grow-1 {
-    flex-grow: 1;
-}
-
-.flex.align-space-between {
-    align-items: space-between;
-}
-
-/* -------- *
- *   GRID   *
- * -------- */
-.grid {
-    display: grid;
-}
-
-/* --------------- *
- *   FLEX / GRID   *
- * --------------- */
-.align-center:is(.flex, .grid) {
-    align-items: center;
-}
-
-.justify-center:is(.flex, .grid) {
-    justify-content: center;
-}
-
-/* --------------- *
- *   APPLICATION   *
- * --------------- */
-.glossary-container{
     display: grid;
     grid-template-columns: 2fr 1fr 0.25fr;
-    
-}
-.glossary-list {
-    padding:100px 100px;
-    list-style-type: none;
-}
-.glossary-definition{
-    position:absolute;
-    padding-top: 40px;
-    right:0;
-    z-index: -1;
+    padding-top: 7%;
+    padding-left: 10%;
 }
 
+.glossary-list {
+    list-style-type: none;
+    margin-top: 2rem;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.glossary-left>h1 {
+    font-weight: 600;
+}
+
+.gItem {
+    padding-left: 0;
+}
+
+.gItem>button {
+    color: black;
+    text-decoration: none;
+}
+
+.gItem:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.glossary-definition {
+    position: absolute;
+    padding-top: 40px;
+    right: 0;
+    z-index: -1;
+}
