@@ -9,7 +9,7 @@ const Contact = () => {
                 <path d="M1068 431.647C1068 658.726 810.186 875 582.921 875C355.655 875 0 658.726 0 431.647C0 204.569 266.814 0 494.079 0C721.345 0 1068 204.569 1068 431.647Z" fill="#F2CF66" />
             </svg>
             <p className="directoryPath">
-                <Link to="/home" className="homeLink">Home</Link> / Contact
+                <Link to="/" className="homeLink">Home</Link> / Contact
             </p>
             <div className="form-container">
                 <h2 className='contact'>Send us a Message!</h2>

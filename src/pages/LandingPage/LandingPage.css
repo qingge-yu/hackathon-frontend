@@ -10,6 +10,12 @@ html, body {
     height: 100%;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    /* border: 3px solid red; */
+}
+
 /* ---------- *
  *   GLOBAL   *
  * ---------- */
@@ -24,7 +30,7 @@ html, body {
  *   UTILITY   *
  * ----------- */
 p {
-  background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .height-full {
@@ -88,25 +94,30 @@ p {
  *   APPLICATION   *
  * --------------- */
 .content-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 60rem;
-    background: radial-gradient(circle, #1c1a1aaf 50%, transparent 20%) -10rem 20rem no-repeat,
-    linear-gradient(35deg, transparent 70%, #87878780 20%);
+    height: 100%;
 }
 
 .landing-about {
-    padding: 10rem 3.5rem;
+    width: 650px;
+    padding: 280px 100px;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .learn {
-    background-color: rgb(174, 174, 174);
-    max-width: 7rem;
-    padding: 0.3rem;
-    border: none;
-    border-radius: .25rem;
+    background-color: black;
     color: white;
+    border-radius: 16px;
+    padding: 5px 20px;
+    width: fit-content;
+}
+
+.landingBG {
+    position: absolute;
+    left: -4.39%;
+    right: 41.54%;
+    top: 2.58%;
+    bottom: 19.86%;
+    z-index: -1;
 }

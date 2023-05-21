@@ -10,9 +10,11 @@ import Profiles from './pages/ProfilePage/ProfilePage'
 import Contact from './pages/ContactPage/ContactPage'
 import About from './pages/AboutPage/AboutPage'
 import ChangePassword from './pages/ChangePasswordPage/ChangePasswordPage'
+import LessonsPage from './pages/LessonsPage/LessonsPage'
 
 // components
 import NavBar from './components/NavBar/NavBar'
+import Footer from './components/Footer/Footer'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
@@ -20,7 +22,6 @@ import * as authService from './services/authService'
 
 // styles
 import './App.css'
-import LessonsPage from './pages/LessonsPage/LessonsPage'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -62,7 +63,7 @@ const App = () => {
         <Route
           path="/learn"
           element={
-            <LessonsPage modalShow={modalShow} setModalShow={setModalShow}/>
+            <LessonsPage modalShow={modalShow} setModalShow={setModalShow} />
           }
         />
         <Route
@@ -92,6 +93,7 @@ const App = () => {
           }
         />
       </Routes>
+      <Footer />
     </>
   )
 }
