@@ -2,7 +2,7 @@ import LessonCarousel from "../../components/LessonCarousel/Carousel";
 import styles from './LessonsPage.css'
 import LessonBrowser from "../../components/LessonBrowser/LessonBrowser";
 // import Button from 'react-bootstrap/Button';
-// import Popup from '../../components/Pop-up/modal.jsx'
+import Popup from '../../components/Pop-up/modal.jsx'
 
 const LessonsPage = ({ user, modalShow, setModalShow }) => {
 
