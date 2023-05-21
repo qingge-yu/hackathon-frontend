@@ -63,26 +63,23 @@ html {
 .browserbody {
   font-size: 1rem;
   font-weight: 400;
-  min-block-size: 100%;
-  min-inline-size: 100%;
-  display: grid;
+  /* min-block-size: 100%;
+  min-inline-size: 100%; */
+  /* display: grid; */
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100%; */
+  /* flex: 4; */
+  height: 70%;
+  margin-bottom: 3rem;
+  /* flex: 1; */
 }
 
 .window {
-  /*absolute is important for draggable JS to work*/
-  /* position: absolute;  */
-  
-  /* min-inline-size: 48rem; */
-  /* min-block-size: 32rem; */
   margin-top: 1%;
-  /* min-inline-size: 18rem;
-  min-block-size: 19rem;
-  max-inline-size: 105rem;
-  max-block-size: 44rem; */
+  margin-left: auto;
+  margin-right: auto;
   width: clamp(10rem, 100%, 80rem);
-  height: clamp(5rem, 70%, 45rem);
+  height: 100%;
   display: flex;
   flex-direction: column;
   
