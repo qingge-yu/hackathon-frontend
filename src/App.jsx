@@ -56,7 +56,7 @@ const App = () => {
   function AppRender() {
     return (
     <>
-      <NavBar user={user} language={language} setLanguage={setLanguage} handleLogout={handleLogout} />
+      <NavBar user={user} language={language} data={Data} setLanguage={setLanguage} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} modalShow={modalShow} setModalShow={setModalShow} />} />
         <Route

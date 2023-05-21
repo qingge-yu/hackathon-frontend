@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './NavBar.css'
 import LanguageMenu from '../LanguageMenu/LanguageMenu'
 
-export default function NavBar({ setModalShow }) {
-
+export default function NavBar({ setModalShow, language, setLanguage }) {
   return (
     <nav className='navBar'>
       <h1 className='navigaedu'><NavLink to="/" className='navigateHome'>navigat<b style={{ color: "#3476EF" }}>edu</b></NavLink></h1>
@@ -19,7 +18,7 @@ export default function NavBar({ setModalShow }) {
           isActive ? "linkStyle contactActive" : "navBarList"}>Contact</NavLink></li>
       </ul>
       <div></div>
-      <LanguageMenu />
+      <LanguageMenu language={language} setLanguage={setLanguage} />
     </nav >
   )
 }

@@ -1,7 +1,6 @@
 import './LessonBrowser.css'
 
 const LessonBrowser = (props) => {
-  console.log(props)
   return ( 
     <div className='browserbody'>
     

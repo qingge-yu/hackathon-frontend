@@ -14,7 +14,7 @@ export default function BasicSelect({ setLanguage, language }) {
     return (
         <Box sx={{ minWidth: 150 }}>
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">English</InputLabel>
+                <InputLabel id="demo-simple-select-label"></InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
