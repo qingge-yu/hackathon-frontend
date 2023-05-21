@@ -1,12 +1,21 @@
 .lessonContent {
   position: absolute;
   left: 50%;
-  top: 50%;
+  /* top: 50%; */
   transform: translate(-50%,-50%);
   background-color: white;
-  height: 350px;
+  max-height: 350px;
+  height: 100%;
   width: 570px;
   border-radius: 20px;
+  margin-top: 20rem;
+}
+
+@media (max-height: 45rem) {
+  .lessonContent {
+    /* background-color: blue; */
+    margin-top: 35vh;
+  }
 }
 
 .lessonContent h1 {
