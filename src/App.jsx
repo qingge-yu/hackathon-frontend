@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 // page components
@@ -25,6 +25,10 @@ import './App.css'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [modalShow, setModalShow] = useState(false);
+  const [Data, setData] = useState();
+  const [language, setLanguage] = useState('english');
+
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -37,11 +41,19 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  const [modalShow, setModalShow] = useState(false);
+  const URL = "http://localhost:4000/data/"
+
+  const getData = async () => {
+    const response = await fetch(URL);
+    const data = await response.json();
+    setData(data);
+};
+  
+  useMemo(() => {getData()}, [language]);
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} language={language} setLanguage={setLanguage} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} modalShow={modalShow} setModalShow={setModalShow} />} />
         <Route
