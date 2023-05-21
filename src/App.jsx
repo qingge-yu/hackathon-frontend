@@ -43,6 +43,7 @@ const App = () => {
   }
 
   const URL = "https://navigatedu-api.herokuapp.com/"
+  // const URL = "http://localhost:4000/"
 
   const getData = async () => {
     const response = await fetch(URL+language);
