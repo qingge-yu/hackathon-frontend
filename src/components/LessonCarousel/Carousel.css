@@ -33,6 +33,14 @@
   text-decoration: underline;
 }
 
+@media (max-height: 45rem) {
+  .carouselContainer {
+    /* background-color: blue; */
+    position: fixed;
+    bottom: 0;
+  }
+}
+
 #carouselP {
   margin: .25rem;
   line-height: 35px;
