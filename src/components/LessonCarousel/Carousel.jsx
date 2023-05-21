@@ -6,7 +6,7 @@ import LessonBrowser from '../LessonBrowser/LessonBrowser';
 import LessonOneSlides from '../LessonOne/LessonOne';
 
 
-const LessonCarousel = () => {
+const LessonCarousel = ({ user, modalShow, setModalShow }) => {
 
   const [lessonNum, setLessonNum] = useState(1)
   const [lessonOne, setLessonOne] = useState(true)
@@ -150,7 +150,7 @@ const LessonCarousel = () => {
           })} */}
         </Carousel>
       </div>
-      {lessonOne ? (<LessonBrowser />):<></>}
+      {lessonOne ? (<LessonBrowser modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
       {/* {lessonOne ? (<LessonOneSlides />):<></>} */}
     </>
    )
