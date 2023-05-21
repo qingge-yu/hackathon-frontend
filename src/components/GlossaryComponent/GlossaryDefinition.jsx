@@ -51,7 +51,7 @@ const GlossaryDefinition = (props) => {
         <div className="glossary-component">
             <h1>{props.definitions}</h1>
             <p>{Gdefinitions[props.definitions]}</p>
-            <img src={imagePaths[props.definitions]} alt="123" height="50px" width="50px" />
+            <img src={imagePaths[props.definitions]} alt="background img" className="glossaryBG" />
         </div>
     )
 }
