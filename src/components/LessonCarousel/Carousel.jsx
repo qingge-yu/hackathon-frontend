@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import LessonBrowser from '../LessonBrowser/LessonBrowser';
-import LessonOneSlides from '../LessonOne/LessonOne';
 
 
 const LessonCarousel = ({ user, modalShow, setModalShow }) => {
@@ -151,7 +150,6 @@ const LessonCarousel = ({ user, modalShow, setModalShow }) => {
         </Carousel>
       </div>
       {lessonOne ? (<LessonBrowser modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {/* {lessonOne ? (<LessonOneSlides />):<></>} */}
     </>
    )
 }
