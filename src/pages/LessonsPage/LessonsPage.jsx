@@ -18,11 +18,11 @@ const LessonsPage = ({ user, modalShow, setModalShow }) => {
       <main className={styles.container}>
         {/* <Button variant="primary" onClick={() => setModalShow(true)}>
           Launch vertically centered modal
-        </Button>
+        </Button> */}
         <Popup
           show={modalShow}
           onHide={() => setModalShow(false)}
-        /> */}
+        />
         <LessonCarousel />
         <LessonBrowser modalShow={modalShow} setModalShow={setModalShow}/>
       </main>
