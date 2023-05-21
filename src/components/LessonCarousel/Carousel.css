@@ -31,7 +31,7 @@
   font-weight: 400;
 }
 
-.active {
+.carouselContainer .active {
   color: rgba(29, 27, 32, 1);
   animation: activeAnimation 500ms forwards;
   font-weight: 400;
