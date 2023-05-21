@@ -1,5 +1,5 @@
 // npm modules
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 // page components
@@ -50,9 +50,11 @@ const App = () => {
     setData(data);
 };
   
-  useMemo(() => {getData()}, [language]);
+  let trigger = useMemo(() => ({language}), [language]);
+  useEffect(()=> {getData()}, [trigger])
 
-  return (
+  function AppRender() {
+    return (
     <>
       <NavBar user={user} language={language} setLanguage={setLanguage} handleLogout={handleLogout} />
       <Routes>
@@ -115,6 +117,8 @@ const App = () => {
       <Footer />
     </>
   )
+  }
+  return Data ? AppRender() : console.log("loading")
 }
 
 export default App
