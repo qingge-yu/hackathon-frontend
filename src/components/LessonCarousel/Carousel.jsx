@@ -1,18 +1,26 @@
 import './Carousel.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import LessonBrowser from '../LessonBrowser/LessonBrowser';
 
 
 const LessonCarousel = () => {
 
   const [lessonNum, setLessonNum] = useState(1)
+  const [lessonOne, setLessonOne] = useState(true)
 
   const buttons = [1,2,3,4,5,6,7,8,9]
   function handleLessonClick(name) {
     setLessonNum(name)
     console.log(lessonNum)
   }
+
+  useEffect(() => { 
+    if (lessonNum === 1) {
+      setLessonOne(true)
+    } else setLessonOne(false)
+  }, [lessonNum])
 
   const responsive = {
     superLargeDesktop: {
@@ -34,6 +42,7 @@ const LessonCarousel = () => {
   };
 
 
+
   return ( 
     <>
       <div className='carouselContainer'>
@@ -49,6 +58,7 @@ const LessonCarousel = () => {
           })}
         </Carousel>
       </div>
+      {lessonOne ? (<LessonBrowser />):<></>}
     </>
    )
 }
