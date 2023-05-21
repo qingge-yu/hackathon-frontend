@@ -15,6 +15,7 @@ import Glossary from './pages/GlossaryPage/Glossary'
 
 // components
 import NavBar from './components/NavBar/NavBar'
+import Footer from './components/Footer/Footer'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
@@ -75,7 +76,7 @@ const App = () => {
         <Route
           path="/learn"
           element={
-            <LessonsPage modalShow={modalShow} setModalShow={setModalShow}/>
+            <LessonsPage modalShow={modalShow} setModalShow={setModalShow} />
           }
         />
         <Route
@@ -111,6 +112,7 @@ const App = () => {
           }
         />
       </Routes>
+      <Footer />
     </>
   )
 }

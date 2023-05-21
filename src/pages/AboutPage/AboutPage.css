@@ -1,26 +1,27 @@
-.aboutPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .aboutPage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        padding-left: 150px;
+    }
 
-}
+    .aboutBG {
+        position: absolute;
+        left: 0;
+        right: auto;
+        top: auto;
+        bottom: 0;
+        z-index: -1;
+    }
 
-.aboutBG {
-    position: absolute;
-    width: 1120px;
-    left: calc(50% - 1120px/2 + 13px);
-    top: 32.81%;
-    bottom: -39.65%;
-    z-index: -1;
-}
+    .aboutPage>h1 {
+        margin-bottom: 50px;
+    }
 
-.aboutPage>h1 {
-    margin-top: 100px;
-}
-
-.aboutPage>p {
-    margin-top: 400px;
-    width: 360px;
-    font-weight: 500;
-}
+    .aboutText {
+        width: 400px;
+        font-weight: 500;
+        font-size: 18px;
+    }
