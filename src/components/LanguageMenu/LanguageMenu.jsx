@@ -18,7 +18,7 @@ export default function BasicSelect({ setLanguage, language }) {
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value="English"
+                    value={language}
                     label="Language"
                     onChange={handleChange}
                 >
