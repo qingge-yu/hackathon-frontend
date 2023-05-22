@@ -1,14 +1,16 @@
-/* .glossary-component { */
-/* padding-top: 50%; */
-/* } */
+.glossary-component {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: -15rem;
+}
 
 .glossary-component>h1 {
-    padding-top: 60%;
-    padding-bottom: 10%;
+    /* padding-top: 60%;
+    padding-bottom: 10%; */
 }
 
 .glossary-component>p {
-    width: 50%;
+    /* width: 50%; */
 }
 
 .glossaryBG {
