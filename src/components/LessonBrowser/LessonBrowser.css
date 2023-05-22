@@ -69,7 +69,7 @@ html {
   justify-content: center;
   /* min-height: 100%; */
   /* flex: 4; */
-  height: 70%;
+  height: 67%;
   margin-bottom: 3rem;
   /* flex: 1; */
 }
@@ -222,4 +222,8 @@ html {
 .window a {
   color: var(--red-0);
   text-decoration: none;
+}
+
+.lessonOneHeader {
+  margin-top: -10%;
 }
