@@ -8,7 +8,7 @@
 
 html, body {
     height: 100%;
-    /* overflow: scroll; */
+    /* : scroll; */
 }
 
 /* ---------- *
@@ -114,15 +114,14 @@ section.content-container {
     position: absolute;
     width: 1068px;
     left: calc(50% - 1068px/2 - 4px);
-    top: 12%;
+    top: 15%;
     bottom: 5.27%;
     z-index: -1;
     height: 80%;
 }
 
 .form-container {
-    padding-top: 6rem;
-    height: 80%;
+    height: 90%;
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -149,12 +148,6 @@ section.content-container {
     padding: 10px 20px;
     max-width: 8rem;
     margin: auto;
-}
-
-.directoryPath {
-    position: absolute;
-    left: 7%;
-    top: 13%;
 }
 
 .homeLink {

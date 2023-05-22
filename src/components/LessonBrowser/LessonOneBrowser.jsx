@@ -1,9 +1,15 @@
 import { useState } from 'react';
-import './LessonOneBrowser.css'
+import './LessonBrowser.css'
 import { lessonOneData } from '../LessonList/Lesson1Data';
 
-const LessonBrowser = (props) => {
+const LessonOneBrowser = (props) => {
   const [slide, setSlide] = useState(0)
+
+  function handleStep() {
+    setSlide(slide+1)
+    console.log(slide)
+  }
+
   console.log(props)
   return ( 
     <div className='browserbody'>
@@ -14,14 +20,14 @@ const LessonBrowser = (props) => {
             <button aria-label="minimize"></button>
             <button aria-label="maximize"></button>
           </div>
-          <div class="tabs">
-            <div class="tab">
+          <div  class="tabs">
+            <div class="tab" id={slide === 2 ? 'highlight' : ''}>
               <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
                 <circle cx="9" cy="9" r="9" fill="var(--red-0)"></circle>
                 <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="var(--orange-0)"></path>
-                <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="var(--yellow-0)"></path>
+                <path  d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="var(--yellow-0)"></path>
               </svg>New Tab
-              <button aria-label="close tab" onClick={() => props.setModalShow(true)}>
+              <button aria-label="close tab" id={slide === 7 ? 'highlight' : ''}>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
                   <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -37,19 +43,19 @@ const LessonBrowser = (props) => {
           </div>
         </header>
         <nav class="toolbar">
-          <button aria-label="go back">
+          <button aria-label="go back" id={slide === 4 ? 'highlight' : ''}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
               <path d="M15.1875 9H2.8125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
               <path d="M7.875 3.9375L2.8125 9L7.875 14.0625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </button>
-          <button aria-label="go forward">
+          <button aria-label="go forward" id={slide === 4 ? 'highlight' : ''}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
               <path d="M2.8125 9H15.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
               <path d="M10.125 3.9375L15.1875 9L10.125 14.0625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </button>
-          <button aria-label="reload">
+          <button aria-label="reload" id={slide === 5 ? 'highlight' : ''}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
               <path d="M12.3868 7.01123H15.7618V3.63623" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
               <path d="M13.3752 13.3752C12.5099 14.2406 11.4074 14.8299 10.2071 15.0686C9.00686 15.3074 7.76276 15.1848 6.63215 14.7165C5.50153 14.2482 4.53517 13.4551 3.85528 12.4376C3.17539 11.4201 2.8125 10.2238 2.8125 9C2.8125 7.77623 3.17539 6.57994 3.85528 5.56241C4.53517 4.54488 5.50153 3.75182 6.63215 3.2835C7.76276 2.81518 9.00686 2.69265 10.2071 2.93139C11.4074 3.17014 12.5099 3.75944 13.3752 4.62478L15.7617 7.01126" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -62,8 +68,8 @@ const LessonBrowser = (props) => {
               <path d="M10.6863 15.1869V11.2494C10.6863 11.1002 10.627 10.9571 10.5215 10.8516C10.416 10.7462 10.273 10.6869 10.1238 10.6869H7.87378C7.7246 10.6869 7.58152 10.7462 7.47603 10.8516C7.37054 10.9571 7.31128 11.1002 7.31128 11.2494V15.1869" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </button>
-          <div class="search">
-            <input className='browserText' type="text" placeholder="Search with QuackQuackGo or enter address"/>
+          <div className="search">
+            <input className='browserText' type="text" placeholder="Search with QuackQuackGo or enter address" id={slide === 1 ? 'highlight' : ''}/>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
               <path d="M8.15613 14.0625C11.4181 14.0625 14.0624 11.4182 14.0624 8.15625C14.0624 4.89432 11.4181 2.25 8.15613 2.25C4.8942 2.25 2.24988 4.89432 2.24988 8.15625C2.24988 11.4182 4.8942 14.0625 8.15613 14.0625Z" stroke="var(--cream-0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
               <path d="M12.3323 12.3329L15.7495 15.7501" stroke="var(--cream-0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -82,7 +88,7 @@ const LessonBrowser = (props) => {
               <path d="M15.1875 10.6875V14.625C15.1875 14.7742 15.1282 14.9173 15.0227 15.0227C14.9173 15.1282 14.7742 15.1875 14.625 15.1875H3.375C3.22582 15.1875 3.08274 15.1282 2.97725 15.0227C2.87176 14.9173 2.8125 14.7742 2.8125 14.625V10.6875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </button>
-          <button aria-label="history, bookmarks and more">
+          <button id={slide === 3 ? 'highlight' : ''} aria-label="history, bookmarks and more">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
               <path d="M5.625 2.8125H3.375C3.06434 2.8125 2.8125 3.06434 2.8125 3.375V14.625C2.8125 14.9357 3.06434 15.1875 3.375 15.1875H5.625C5.93566 15.1875 6.1875 14.9357 6.1875 14.625V3.375C6.1875 3.06434 5.93566 2.8125 5.625 2.8125Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
               <path d="M2.8125 5.625H6.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -109,7 +115,7 @@ const LessonBrowser = (props) => {
               <path d="M4.48584 14.0185C4.90955 13.1854 5.55552 12.4859 6.35224 11.9973C7.14895 11.5086 8.06534 11.25 8.99996 11.25C9.93458 11.25 10.851 11.5086 11.6477 11.9972C12.4444 12.4859 13.0904 13.1854 13.5141 14.0185" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </button>
-          <button aria-label="menu">
+          <button aria-label="menu" id={slide === 6 ? 'highlight' : ''}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
               <path d="M2.8125 9H15.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
               <path d="M2.8125 4.5H15.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -127,12 +133,13 @@ const LessonBrowser = (props) => {
           </h1>
         </main>
       </div>
-      {/* <div className='lessonContent'>
-      {lessonOneData[slide].header}
-      {lessonOneData[slide].content}
-      </div> */}
+      <div className='lessonOneContent'>
+        {lessonOneData[slide].header}
+        {lessonOneData[slide].content}
+        {slide < 8 ? <button onClick={handleStep}>{slide + 1} of 8</button> : <button>Next Lesson</button>}
+      </div>
     </div>
    );
 }
  
-export default LessonBrowser
+export default LessonOneBrowser

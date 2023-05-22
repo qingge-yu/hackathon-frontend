@@ -1,36 +1,176 @@
 //Import modules
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import GlossaryDefinition from '../../components/GlossaryComponent/GlossaryDefinition'
+import GlossaryDefault from '../../components/GlossaryDefault/GlossaryDefault'
 import Button from 'react-bootstrap/Button';
 
 // Import CSS
 import './Glossary.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'd
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 const Glossary = () => {
-    
+
     // To make definitions pop up when clicked
     const [GDefShow, setGDefShow] = useState("");
+    const [selectedButton, setSelectedButton] = useState(null)
+    const [searchInput, setSearchInput] = useState("")
 
     function handleLessonClick(name) {
         setGDefShow(name)
     }
 
+    const handleButtonClick = (buttonText) => {
+        setSelectedButton(buttonText)
+    }
+
+    // const handleChange = (e) => {
+    //     e.preventDefault();
+    //     setSearchInput(e.target.value);
+    // }
+
+    const items = [
+        {
+            id: 0,
+            name: 'browser'
+        },
+        {
+            id: 1,
+            name: 'url'
+        },
+        {
+            id: 2,
+            name: 'search engine'
+        },
+        {
+            id: 3,
+            name: 'software'
+        },
+        {
+            id: 4,
+            name: 'program',
+        },
+        {
+            id: 5,
+            name: 'website'
+        },
+        {
+            id: 6,
+            name: 'tabs'
+        },
+        {
+            id: 7,
+            name: 'bookmark'
+        },
+        {
+            id: 8,
+            name: 'back button'
+        },
+        {
+            id: 9,
+            name: 'forward button'
+        },
+        {
+            id: 10,
+            name: 'refresh'
+        },
+        {
+            id: 11,
+            name: 'history'
+        },
+        {
+            id: 12,
+            name: 'hyperlink'
+        }
+    ]
+
+    const handleOnSearch = (string, results) => {
+        setSearchInput(results)
+    }
+
+
     return (
-        <div>
-            <div className="glossary-container">
+        <div className="glossary-container">
+            <p className="directoryPath">
+                <Link to="/" className="homeLink">Home</Link> / Glossary
+            </p>
+            <div className="glossary-left">
                 <ul className="glossary-list">
-                    <h1>Glossary</h1>
-                    <li><Button variant="link" onClick={() => handleLessonClick('Browser')}>Browser</Button></li>
-                    <li><Button variant="link" onClick={() => handleLessonClick('URL')}>URL</Button></li>
-                    <li><Button variant="link" onClick={() => handleLessonClick('Hyperlink')}>Hyperlink</Button></li>
-                    <li><Button variant="link" onClick={() => handleLessonClick('Search Engine')}>Search Engine</Button></li>
+                    <div className="searchBar">
+                        <h2>Glossary</h2>
+                        {/* <span><FontAwesomeIcon className="fab fa-react fa-1x" style={{ color: 'black' }} icon={faMagnifyingGlass} /></span> */}
+                        {/* <input
+                            className='glossaryInput'
+                            type="search"
+                            placeholder='Search'
+                            onChange={handleChange}
+                            value={searchInput} /> */}
+                        <div style={{ width: 200, marginLeft: '2rem' }}>
+                            <ReactSearchAutocomplete
+                                items={items}
+                                onSearch={handleOnSearch}
+                                value={searchInput}
+                            />
+                        </div>
+                    </div>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Browser' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Browser'); handleButtonClick('Browser') }}
+                    >Browser</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'URL' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('URL'); handleButtonClick('URL') }}
+                    >URL</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Hyperlink' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Hyperlink'); handleButtonClick('Hyperlink') }}
+                    >Hyperlink</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Search Engine' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Search Engine'); handleButtonClick('Search Engine') }}
+                    >Search Engine</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Software' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Software'); handleButtonClick('Software') }}
+                    >Software</Button></li>
+                    <li className="gItem" ><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Program' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Program'); handleButtonClick('Program') }}
+                    >Program</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Website' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Website'); handleButtonClick('Website') }}
+                    >Website</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Tabs' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Tabs'); handleButtonClick('Tabs') }}
+                    >Tabs</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Bookmarks' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Bookmarks'); handleButtonClick('Bookmarks') }}
+                    >Bookmarks</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Back Button' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Back Button'); handleButtonClick('Back Button') }}
+                    >Back Button</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Forward Button' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Forward Button'); handleButtonClick('Forward Button') }}
+                    >Forward Button</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Refresh' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Refresh'); handleButtonClick('Refresh') }}
+                    >Refresh</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'History' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('History'); handleButtonClick('History') }}
+                    >History</Button></li>
                 </ul>
-                <GlossaryDefinition definitions={GDefShow} />
-                <svg className="glossary-definition" width="693" height="600" viewBox="0 0 693 816" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M693 443.78C693 670.587 549.079 816 357.712 816C166.345 816 0 670.587 0 443.78C0 216.973 187.701 0 379.068 0C570.434 0 693 216.973 693 443.78Z" fill="#F2CF66"/>
-                </svg>
             </div>
+            {GDefShow ? <GlossaryDefinition definitions={GDefShow} /> : <GlossaryDefault />}
         </div>
     )
 }

@@ -1,101 +1,70 @@
-/* ------------- *
- *   CSS Reset   *
- * ------------- */
- *, *::before, *::after {
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html, body {
+.glossary-container {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     height: 100%;
 }
 
-/* ---------- *
- *   GLOBAL   *
- * ---------- */
-:root {
-    /* background colors */
-
-    /* other colors */
-    --white-col: white;
+.directoryPath {
+    position: absolute;
+    top: 8rem;
+    left: 5rem;
 }
 
-/* ----------- *
- *   UTILITY   *
- * ----------- */
-.height-full {
-    height: 100%;
-}
-
-.width-full {
-    width: 100%;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.borderless {
-    border: none !important;
-}
-
-.outlineless {
-    outline: none;
-}
-
-/* -------- *
- *   FLEX   *
- * -------- */
-.flex {
+.glossary-left {
+    grid-column: 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 5rem;
 }
 
-.flex.column {
+.glossary-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
     flex-direction: column;
 }
 
-.flex.grow-1 {
-    flex-grow: 1;
+.glossary-component {
+    flex: 1;
 }
 
-.flex.align-space-between {
-    align-items: space-between;
-}
-
-/* -------- *
- *   GRID   *
- * -------- */
-.grid {
-    display: grid;
-}
-
-/* --------------- *
- *   FLEX / GRID   *
- * --------------- */
-.align-center:is(.flex, .grid) {
+.searchBar {
+    position: relative;
+    font-weight: 600;
+    display: flex;
     align-items: center;
 }
 
-.justify-center:is(.flex, .grid) {
-    justify-content: center;
+/* .searchBar>input {
+    margin-left: 3rem;
+    padding-left: 1rem;
+    border-radius: 30px;
+    border: 0;
+    box-shadow: 0px 2px 2px grey;
+    width: 150px;
+} */
+
+.gItem {
+    padding-left: 0;
 }
 
-/* --------------- *
- *   APPLICATION   *
- * --------------- */
-.glossary-container{
-    display: grid;
-    grid-template-columns: 2fr 1fr 0.25fr;
-    
-}
-.glossary-list {
-    padding:100px 100px;
-    list-style-type: none;
-}
-.glossary-definition{
-    position:absolute;
-    padding-top: 40px;
-    right:0;
-    z-index: -1;
+.gItem>button {
+    color: black;
+    text-decoration: none;
+    padding-left: 0;
 }
 
+.gItem>button:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* 
+span {
+    margin-left: 350px;
+    margin-right: -230px;
+    z-index: 5;
+} */

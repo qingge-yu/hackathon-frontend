@@ -1,4 +1,9 @@
     .aboutPage {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .aboutLeft {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -24,4 +29,10 @@
         width: 400px;
         font-weight: 500;
         font-size: 18px;
+    }
+
+    .aboutPage>img {
+        z-index: -3;
+        height: 50%;
+        margin-left: auto;
     }

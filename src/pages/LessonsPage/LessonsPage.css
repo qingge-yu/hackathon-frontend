@@ -1,0 +1,10 @@
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 1; */
+  height: 100%;
+}
+
+body, #root {
+  height: 100%;
+}

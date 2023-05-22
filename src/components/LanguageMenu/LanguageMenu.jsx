@@ -22,7 +22,7 @@ export default function BasicSelect({ setLanguage, language }) {
                     label="Language"
                     onChange={handleChange}
                 >
-                    <MenuItem value="eng">English</MenuItem>
+                    <MenuItem value="en">English</MenuItem>
                     <MenuItem value="es">Español</MenuItem>
                     {/* <MenuItem value="ar">عربي</MenuItem>
                     <MenuItem value="ja">日本語</MenuItem>

@@ -1,13 +1,8 @@
 .carouselContainer {
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 5%;
+  /* margin-right: 50%; */
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-  right: 5%;
-  min-height: 3.5rem;
 }
 
 #lessonButton {
@@ -20,7 +15,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90px;
+  height: 160px;
 }
 
 .inactive {
@@ -36,6 +31,14 @@
   animation: activeAnimation 500ms forwards;
   font-weight: 400;
   text-decoration: underline;
+}
+
+@media (max-height: 45rem) {
+  .carouselContainer {
+    /* background-color: blue; */
+    position: fixed;
+    bottom: 0;
+  }
 }
 
 #carouselP {
