@@ -1,5 +1,5 @@
 // npm modules
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 // page components
@@ -28,7 +28,7 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const [modalShow, setModalShow] = useState(false);
   const [Data, setData] = useState();
-  const [language, setLanguage] = useState('english');
+  const [language, setLanguage] = useState('en');
 
   const navigate = useNavigate()
 
@@ -42,19 +42,23 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-//   const URL = "http://localhost:4000/data/"
+  const URL = "https://navigatedu-api.herokuapp.com/"
+  // const URL = "http://localhost:4000/"
 
-//   const getData = async () => {
-//     const response = await fetch(URL);
-//     const data = await response.json();
-//     setData(data);
-// };
-  
-//   useMemo(() => {getData()}, [language]);
+  const getData = async () => {
+    const response = await fetch(URL+language);
+    const data = await response.json();
+    setData(data);
+};
 
-  return (
+
+  let trigger = useMemo(() => ({language}), [language]);
+  useEffect(()=> {getData()}, [trigger])
+
+  function AppRender() {
+    return (
     <>
-      <NavBar user={user} language={language} setLanguage={setLanguage} handleLogout={handleLogout} />
+      <NavBar user={user} language={language} data={Data} setLanguage={setLanguage} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} modalShow={modalShow} setModalShow={setModalShow} />} />
         <Route
@@ -115,6 +119,9 @@ const App = () => {
       <Footer />
     </>
   )
+  }
+  return Data ? AppRender() : console.log("loading")
+  // return AppRender()
 }
 
 export default App

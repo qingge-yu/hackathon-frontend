@@ -24,7 +24,7 @@ export default function BasicSelect({ setLanguage, language }) {
                 >
                     <MenuItem value="en">English</MenuItem>
                     <MenuItem value="es">Español</MenuItem>
-                    <MenuItem value="ar">عربي</MenuItem>
+                    {/* <MenuItem value="ar">عربي</MenuItem>
                     <MenuItem value="ja">日本語</MenuItem>
                     <MenuItem value="fr">Français</MenuItem>
                     <MenuItem value="de">Deutsch</MenuItem>
@@ -34,7 +34,7 @@ export default function BasicSelect({ setLanguage, language }) {
                     <MenuItem value="zh-TW">中文繁體</MenuItem>
                     <MenuItem value="ko">한국인</MenuItem>
                     <MenuItem value="tl">Tagalog</MenuItem>
-                    <MenuItem value="vi">Tiếng Việt</MenuItem>
+                    <MenuItem value="vi">Tiếng Việt</MenuItem> */}
                 </Select>
             </FormControl>
         </Box>
