@@ -11,16 +11,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Glossary = () => {
 
     // To make definitions pop up when clicked
-    const [GDefShow, setGDefShow] = useState("");
+    const [GDefShow, setGDefShow] = useState("Browser");
     const [selectedButton, setSelectedButton] = useState(null)
+    const [searchInput, setSearchInput] = useState("")
 
     function handleLessonClick(name) {
         setGDefShow(name)
     }
 
     const handleButtonClick = (buttonText) => {
-        setSelectedButton(buttonText);
-    };
+        setSelectedButton(buttonText)
+    }
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.target.value);
+    }
+
+    const icon = '&#xF52A;'
 
     return (
         <div>
@@ -29,7 +37,14 @@ const Glossary = () => {
                     <Link to="/" className="homeLink">Home</Link> / Glossary
                 </p>
                 <div className="glossary-left">
-                    <h1>Glossary</h1>
+                    <div className="glossaryTop">
+                        <h1>Glossary</h1>
+                        <input
+                            type="search"
+                            placeholder={icon}
+                            onChange={handleChange}
+                            value={searchInput} />
+                    </div>
                     <ul className="glossary-list">
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Browser' ? 'bold' : 'normal' }}
