@@ -9,13 +9,13 @@ export default function NavBar({ setModalShow, language, setLanguage, data }) {
       <h1 className='navigaedu'><NavLink to="/" className='navigateHome'>navigat<b style={{ color: "#3476EF" }}>edu</b></NavLink></h1>
       <ul className="navBarList">
         <li><NavLink to="/learn" className={({ isActive }) =>
-          isActive ? "linkStyle learnActive" : "navBarList"}>Learn</NavLink></li>
+          isActive ? "linkStyle learnActive" : "navBarList"}>{data[0].Data}</NavLink></li>
         <li><NavLink to="/glossary" className={({ isActive }) =>
-          isActive ? "linkStyle glossaryActive" : "navBarList"}>Glossary</NavLink></li>
+          isActive ? "linkStyle glossaryActive" : "navBarList"}>{data[1].Data}</NavLink></li>
         <li><NavLink to="/about" className={({ isActive }) =>
-          isActive ? "linkStyle aboutActive" : "navBarList"}>About</NavLink></li>
+          isActive ? "linkStyle aboutActive" : "navBarList"}>{data[2].Data}</NavLink></li>
         <li><NavLink to="/contact" className={({ isActive }) =>
-          isActive ? "linkStyle contactActive" : "navBarList"}>Contact</NavLink></li>
+          isActive ? "linkStyle contactActive" : "navBarList"}>{data[3].Data}</NavLink></li>
       </ul>
       <div></div>
       <LanguageMenu language={language} setLanguage={setLanguage} />

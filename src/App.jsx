@@ -60,7 +60,7 @@ const App = () => {
     <>
       <NavBar user={user} language={language} data={Data} setLanguage={setLanguage} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing user={user} modalShow={modalShow} setModalShow={setModalShow} />} />
+        <Route path="/" element={<Landing user={user} data={Data} modalShow={modalShow} setModalShow={setModalShow} />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
