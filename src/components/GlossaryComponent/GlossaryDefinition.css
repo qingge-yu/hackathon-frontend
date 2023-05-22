@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: auto;
+    margin: auto auto auto 0;
 }
 
 .glossaryComponentText {
@@ -14,5 +14,7 @@
 .glossaryBG {
     position: absolute;
     z-index: -1;
-    height: 35em;
+    height: 35rem;
+    /* object-fit: contain; */
+    /* max-height: 100%; */
 }
