@@ -15,7 +15,7 @@ const LessonsPage = ({ user, modalShow, setModalShow }) => {
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
         crossOrigin="anonymous"
       />
-      <main className={styles.container}>
+      <div id='mainContainer' className={styles.container}>
         {/* <Button variant="primary" onClick={() => setModalShow(true)}>
           Launch vertically centered modal
         </Button> */}
@@ -25,7 +25,7 @@ const LessonsPage = ({ user, modalShow, setModalShow }) => {
         />
         <LessonCarousel modalShow={modalShow} setModalShow={setModalShow}/>
         {/* <LessonBrowser modalShow={modalShow} setModalShow={setModalShow}/> */}
-      </main>
+      </div>
     </>
   )
 }

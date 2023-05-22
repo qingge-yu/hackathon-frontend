@@ -117,9 +117,9 @@ html {
   border: none;
 }
 
-.window button {
-  /* color: var(--taupe-10); */
-}
+/* .window button {
+  color: var(--taupe-10);
+} */
 
 .tabs button:hover, .tab button:hover, .toolbar button:hover {
   background-color: var(--taupe-2);
@@ -287,4 +287,8 @@ svg{
 .window a {
   color: var(--red-0);
   text-decoration: none;
+}
+
+.lessonOneHeader {
+  margin-top: -10%;
 }

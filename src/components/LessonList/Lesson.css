@@ -1,0 +1,54 @@
+.lessonContent {
+  position: absolute;
+  left: 50%;
+  /* top: 50%; */
+  transform: translate(-50%,-50%);
+  background-color: white;
+  max-height: 350px;
+  height: 100%;
+  width: 570px;
+  border-radius: 20px;
+  margin-top: 20rem;
+}
+
+@media (max-height: 45rem) {
+  .lessonContent {
+    /* background-color: blue; */
+    margin-top: 35vh;
+  }
+}
+
+.lessonContent h1 {
+  font-size: 48px;
+}
+
+.lessonContent p {
+  font-size: 16px;
+}
+
+.lessonContent h1, .lessonContent p {
+  margin-left: 30px;
+  margin-top: 19.5px;
+  margin-right: 30px;
+}
+
+.lessonContent button {
+  width: 160px;
+  height: 44px;
+  border-radius: 16px;
+  padding: 0px, 20px, 0px, 20px;
+  font-size: 16px;
+  margin-left: 30px;
+  margin-bottom: 19.5px;
+  background-color: black;
+  color: white;
+  margin-top: 25%;
+}
+
+#lessonOneBtn {
+  margin-top: 13.2%;
+}
+
+.lessonContent button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
