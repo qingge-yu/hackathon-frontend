@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import GlossaryDefinition from '../../components/GlossaryComponent/GlossaryDefinition'
+import GlossaryDefault from '../../components/GlossaryDefault/GlossaryDefault'
 import Button from 'react-bootstrap/Button';
 
 // Import CSS
@@ -11,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Glossary = () => {
 
     // To make definitions pop up when clicked
-    const [GDefShow, setGDefShow] = useState("Browser");
+    const [GDefShow, setGDefShow] = useState("");
     const [selectedButton, setSelectedButton] = useState(null)
     const [searchInput, setSearchInput] = useState("")
 
@@ -96,7 +97,7 @@ const Glossary = () => {
                         >History</Button></li>
                     </ul>
                 </div>
-                <GlossaryDefinition definitions={GDefShow} />
+                {GDefShow ? <GlossaryDefinition definitions={GDefShow} /> : <GlossaryDefault />}
             </div>
         </div >
     )
