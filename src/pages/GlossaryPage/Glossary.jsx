@@ -33,51 +33,51 @@ const Glossary = () => {
                     <ul className="glossary-list">
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Browser' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Browser'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Browser'); handleButtonClick('Browser') }}
                         >Browser</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'URL' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('URL'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('URL'); handleButtonClick('URL') }}
                         >URL</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Search Engine' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Search Engine'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Search Engine'); handleButtonClick('Search Engine') }}
                         >Search Engine</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Software' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Software'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Software'); handleButtonClick('Software') }}
                         >Software</Button></li>
                         <li className="gItem" ><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Program' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Program'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Program'); handleButtonClick('Program') }}
                         >Program</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Website' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Website'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Website'); handleButtonClick('Website') }}
                         >Website</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Tabs' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Tabs'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Tabs'); handleButtonClick('Tabs') }}
                         >Tabs</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Bookmarks' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Bookmarks'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Bookmarks'); handleButtonClick('Bookmarks') }}
                         >Bookmarks</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Back Button' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Back Button'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Back Button'); handleButtonClick('Back Button') }}
                         >Back Button</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Forward Button' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Forward Button'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Forward Button'); handleButtonClick('Forward Button') }}
                         >Forward Button</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'Refresh' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('Refresh'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('Refresh'); handleButtonClick('Refresh') }}
                         >Refresh</Button></li>
                         <li className="gItem"><Button variant="link"
                             style={{ fontWeight: selectedButton === 'History' ? 'bold' : 'normal' }}
-                            onClick={() => { handleLessonClick('History'); handleButtonClick() }}
+                            onClick={() => { handleLessonClick('History'); handleButtonClick('History') }}
                         >History</Button></li>
                     </ul>
                 </div>
