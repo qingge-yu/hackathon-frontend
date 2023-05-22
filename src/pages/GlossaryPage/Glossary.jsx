@@ -8,6 +8,8 @@ import Button from 'react-bootstrap/Button';
 // Import CSS
 import './Glossary.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const Glossary = () => {
 
@@ -31,6 +33,7 @@ const Glossary = () => {
         setStartType(true)
     }
 
+
     return (
         <div>
             <div className="glossary-container">
@@ -40,9 +43,13 @@ const Glossary = () => {
                 <div className="glossary-left">
                     <div className="glossaryTop">
                         <h1>Glossary</h1>
+                        <span><FontAwesomeIcon className="fab fa-react fa-1x" style={{color: 'black'}} icon={faMagnifyingGlass} /></span>
                         <input
+                            className='glossaryInput'
                             type="search"
-                            placeholder="search"
+
+                            placeholder='Search'
+
                             onChange={handleChange}
                             value={searchInput} />
                     </div>

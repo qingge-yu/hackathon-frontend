@@ -2,19 +2,20 @@
     font-family: 'Roboto', sans-serif;
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 14%;
-    padding-left: 10%;
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: 1fr 1fr; */
+    /* padding-top: 14%;
+    padding-left: 10%; */
 }
 
 .glossary-list {
     list-style-type: none;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 2rem; */
 }
 
 .glossaryTop {
@@ -29,16 +30,15 @@
 }
 
 .glossaryTop>input {
-    position: absolute;
-    margin-left: 10%;
+    font-family: bootstrap-icons;
+    margin-left: 3rem;
+    /* margin-right: auto; */
     border-radius: 30px;
-    height: 40px;
-    width: 200px;
-    left: 17%;
+    /* height: 40px;
+    width: 200px; */
     border: 0;
     box-shadow: 0px 2px 2px grey;
-    padding-left: 12px;
-    padding-right: 20px;
+    /* flex: 2; */
 }
 
 .gItem {
@@ -54,3 +54,22 @@
     color: black;
     text-decoration: underline;
 }
+
+span {
+    margin-left: 200px;
+    margin-right: -230px;
+    z-index: 5;
+}
+
+
+  .glossary-left {
+    /* background-color: red; */
+    width: 50%;
+    margin-top: 5%;
+  }
+
+  .glossary-component {
+    /* background-color: blue; */
+    /* width: 100%; */
+    flex: 1;
+  }
