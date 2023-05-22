@@ -15,6 +15,7 @@ const Glossary = () => {
     const [GDefShow, setGDefShow] = useState("");
     const [selectedButton, setSelectedButton] = useState(null)
     const [searchInput, setSearchInput] = useState("")
+    const [startType, setStartType] = useState(false)
 
     function handleLessonClick(name) {
         setGDefShow(name)
@@ -27,9 +28,8 @@ const Glossary = () => {
     const handleChange = (e) => {
         e.preventDefault();
         setSearchInput(e.target.value);
+        setStartType(true)
     }
-
-    const icon = '&#xF52A;'
 
     return (
         <div>
@@ -42,7 +42,7 @@ const Glossary = () => {
                         <h1>Glossary</h1>
                         <input
                             type="search"
-                            placeholder={icon}
+                            placeholder="search"
                             onChange={handleChange}
                             value={searchInput} />
                     </div>
