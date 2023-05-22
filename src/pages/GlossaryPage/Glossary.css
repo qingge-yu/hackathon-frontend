@@ -30,7 +30,7 @@
     text-decoration: none;
 }
 
-.gItem:hover {
+.gItem>button:hover {
     color: black;
     text-decoration: underline;
 }
