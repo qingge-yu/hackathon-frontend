@@ -8,8 +8,9 @@ import Button from 'react-bootstrap/Button';
 // Import CSS
 import './Glossary.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'd
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 const Glossary = () => {
 
@@ -26,9 +27,68 @@ const Glossary = () => {
         setSelectedButton(buttonText)
     }
 
-    const handleChange = (e) => {
-        e.preventDefault();
-        setSearchInput(e.target.value);
+    // const handleChange = (e) => {
+    //     e.preventDefault();
+    //     setSearchInput(e.target.value);
+    // }
+
+    const items = [
+        {
+            id: 0,
+            name: 'browser'
+        },
+        {
+            id: 1,
+            name: 'url'
+        },
+        {
+            id: 2,
+            name: 'search engine'
+        },
+        {
+            id: 3,
+            name: 'software'
+        },
+        {
+            id: 4,
+            name: 'program',
+        },
+        {
+            id: 5,
+            name: 'website'
+        },
+        {
+            id: 6,
+            name: 'tabs'
+        },
+        {
+            id: 7,
+            name: 'bookmark'
+        },
+        {
+            id: 8,
+            name: 'back button'
+        },
+        {
+            id: 9,
+            name: 'forward button'
+        },
+        {
+            id: 10,
+            name: 'refresh'
+        },
+        {
+            id: 11,
+            name: 'history'
+        },
+        {
+            id: 12,
+            name: 'hyperlink'
+        }
+    ]
+
+    const handleOnSearch = (string, results) => {
+        setSearchInput(results)
     }
 
 
@@ -42,12 +102,19 @@ const Glossary = () => {
                     <div className="searchBar">
                         <h2>Glossary</h2>
                         {/* <span><FontAwesomeIcon className="fab fa-react fa-1x" style={{ color: 'black' }} icon={faMagnifyingGlass} /></span> */}
-                        <input
+                        {/* <input
                             className='glossaryInput'
                             type="search"
                             placeholder='Search'
                             onChange={handleChange}
-                            value={searchInput} />
+                            value={searchInput} /> */}
+                        <div style={{ width: 200, marginLeft: '2rem' }}>
+                            <ReactSearchAutocomplete
+                                items={items}
+                                onSearch={handleOnSearch}
+                                value={searchInput}
+                            />
+                        </div>
                     </div>
                     <li className="gItem"><Button variant="link"
                         style={{ fontWeight: selectedButton === 'Browser' ? 'bold' : 'normal' }}
@@ -57,6 +124,10 @@ const Glossary = () => {
                         style={{ fontWeight: selectedButton === 'URL' ? 'bold' : 'normal' }}
                         onClick={() => { handleLessonClick('URL'); handleButtonClick('URL') }}
                     >URL</Button></li>
+                    <li className="gItem"><Button variant="link"
+                        style={{ fontWeight: selectedButton === 'Hyperlink' ? 'bold' : 'normal' }}
+                        onClick={() => { handleLessonClick('Hyperlink'); handleButtonClick('Hyperlink') }}
+                    >Hyperlink</Button></li>
                     <li className="gItem"><Button variant="link"
                         style={{ fontWeight: selectedButton === 'Search Engine' ? 'bold' : 'normal' }}
                         onClick={() => { handleLessonClick('Search Engine'); handleButtonClick('Search Engine') }}
