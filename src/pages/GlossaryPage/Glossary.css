@@ -17,8 +17,25 @@
     gap: 2rem;
 }
 
-.glossary-left>h1 {
+.glossaryTop {
     font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.glossaryTop>h1 {
+    margin: 0;
+}
+
+.glossaryTop>input {
+    font-family: bootstrap-icons;
+    margin-left: 10%;
+    border-radius: 30px;
+    height: 40px;
+    width: 200px;
+    border: 0;
+    box-shadow: 0px 2px 2px grey;
+
 }
 
 .gItem {

@@ -14,7 +14,7 @@ import fButtonImg from "../../images/ForwardButton.png"
 import refreshImg from "../../images/Refresh.png"
 import historyImg from "../../images/History.png"
 
-const GlossaryDefinition = (props) => {
+const GlossaryDefinition = ({ definitions }) => {
     let Gdefinitions = {
         Browser: "A software Program that lets you view digital content on the internet.",
         URL: 'The address that identifies a webpage on the internet. It usually starts with "http://" or "https://" followed by the domain name and specific page.',
@@ -49,71 +49,11 @@ const GlossaryDefinition = (props) => {
 
     return (
         <div className="glossary-component">
-            <h1>{props.definitions}</h1>
-            <p>{Gdefinitions[props.definitions]}</p>
-            <img src={imagePaths[props.definitions]} alt="background img" className="glossaryBG" />
+            <h1>{definitions}</h1>
+            <p>{Gdefinitions[definitions]}</p>
+            <img src={imagePaths[definitions]} alt="background img" className="glossaryBG" />
         </div>
     )
 }
 
 export default GlossaryDefinition
-
-
-
-// const backgroundImage = {
-    //     backgroundImage: `url(${imagePaths.d})`,
-    //     border: "1px solid red",
-    //     backgroundSize: "100px",
-    //     height: "100%",
-    //     width: "100%"
-    // } style={backgroundImage}
-
-    //<div className="glossary-component">
-    // < h1 > { props.definitions }</ >
-    //   <p>{Gdefinitions[props.definitions]}</p>
-    //   <img src={imagePaths[props.definitions]} alt="123" height="50px" width="50px" />
-    // </div >
-
-
-
-//  < img src = { require({ imagePaths[props.definitions]}) } alt = "123" height = "50px" width = "50px" />
-
-
-
-
-// import BrowserImage from '../../images/Browser.png';
-// import URLImage from '../../images/URL.png';
-// import HyperlinkImage from '../../images/Hyperlink.png';
-
-//let imagePaths = {
-// Browser: BrowserImage,
-// URL: URLImage,
-// Hyperlink: HyperlinkImage,
-
-
-
-//let imagePaths = {
-// Browser: "../../images/Browser.png",
-// URL: "../../images/URL.png",
-// Hyperlink: "../../images/Hyperlink.png",
-// "Search Engine": "../../images/SearchEngine.png",
-// Software: "../../images/Software.png",
-// Program: "../../images/Program.png",
-// Website: "../../images/Website.png",
-// Tabs: "../../images/Tabs.png",
-// Bookmarks: "../../images/Bookmarks.png",
-// "Back Button": "../../images/BackButton.png",
-// "Forward Button": "../../images/ForwardButton.png",
-// Refresh: "../../images/Refresh.png",
-// History: "../../images/History.png",
-// }
-
-
-
-// return (
-//     <div className="glossary-component">
-//         <h1>{props.definitions}</h1>
-//         <p>{Gdefinitions[props.definitions]}</p>
-//         <img src={require('../../images/Browser.png')} alt="123" height="50px" width="50px" />
-//     </div>
-// )
