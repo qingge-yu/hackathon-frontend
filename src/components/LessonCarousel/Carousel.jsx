@@ -54,15 +54,15 @@ const LessonCarousel = ({ user, modalShow, setModalShow }) => {
 
   return ( 
     <>
-      {lessonNum === 1 ? (<LessonOne modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {lessonNum === 2 ? (<LessonTwo modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {lessonNum === 3 ? (<LessonThree modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {lessonNum === 4 ? (<LessonFour modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {lessonNum === 5 ? (<LessonFive modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {lessonNum === 6 ? (<LessonSix modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {lessonNum === 7 ? (<LessonSeven modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {lessonNum === 8 ? (<LessonEight modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {lessonNum === 9 ? (<LessonNine modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+    //   {lessonNum === 1 ? (<LessonOne modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+    //   {lessonNum === 2 ? (<LessonTwo modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+    //   {lessonNum === 3 ? (<LessonThree modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+    //   {lessonNum === 4 ? (<LessonFour modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+    //   {lessonNum === 5 ? (<LessonFive modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+    //   {lessonNum === 6 ? (<LessonSix modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+    //   {lessonNum === 7 ? (<LessonSeven modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+    //   {lessonNum === 8 ? (<LessonEight modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
+    //   {lessonNum === 9 ? (<LessonNine modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
       <div className='carouselContainer'>
         <Carousel className='carousel' responsive={responsive}>
           <div className='lessonContainer'>
@@ -157,7 +157,6 @@ const LessonCarousel = ({ user, modalShow, setModalShow }) => {
           </div>
         </Carousel>
       </div>
-
     </>
    )
 }
