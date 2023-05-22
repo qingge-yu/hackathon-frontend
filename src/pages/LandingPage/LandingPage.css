@@ -95,7 +95,9 @@ p {
  *   APPLICATION   *
  * --------------- */
 .content-container {
-    height: 100%;
+    /* height: 100%; */
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .landing-about {
@@ -112,6 +114,12 @@ p {
     border-radius: 16px;
     padding: 5px 20px;
     width: fit-content;
+    text-decoration: none;
+}
+
+.learn:hover {
+    color: white;
+    box-shadow: 2px 1px 2px grey;
 }
 
 .landingBG {
@@ -121,4 +129,10 @@ p {
     top: 2.58%;
     bottom: 19.86%;
     z-index: -1;
+}
+
+.content-container>img {
+    z-index: -3;
+    height: 60%;
+    margin: auto;
 }
