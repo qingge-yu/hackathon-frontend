@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom'
 import './LandingPage.css';
+
+import HomeGif from '../../images/HomeGif.gif'
 
 const Landing = () => {
 
@@ -10,8 +13,9 @@ const Landing = () => {
                 </svg>
                 <h1>Explore the Digital World</h1>
                 <p>NavigatEDU is your guide to discovering the digital world! Join us on this exciting journey to learn to become a citizen of the digital age.</p>
-                <button to="/learn" className='learn'>Start Learning</button>
+                <Link to="/learn" className='learn'>Start Learning</Link>
             </section>
+            <img src={HomeGif} alt="loading..." />
         </div>
     );
 }
