@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import GlossaryDefinition from '../../components/GlossaryComponent/GlossaryDefinition'
+import GlossaryDefault from '../../components/GlossaryDefault/GlossaryDefault'
 import Button from 'react-bootstrap/Button';
 
 // Import CSS
@@ -13,9 +14,10 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 const Glossary = () => {
 
     // To make definitions pop up when clicked
-    const [GDefShow, setGDefShow] = useState("Browser");
+    const [GDefShow, setGDefShow] = useState("");
     const [selectedButton, setSelectedButton] = useState(null)
     const [searchInput, setSearchInput] = useState("")
+    const [startType, setStartType] = useState(false)
 
     function handleLessonClick(name) {
         setGDefShow(name)
@@ -28,9 +30,9 @@ const Glossary = () => {
     const handleChange = (e) => {
         e.preventDefault();
         setSearchInput(e.target.value);
+        setStartType(true)
     }
 
-    // const icon = '&#xF52A;'
 
     return (
         <div>
@@ -45,7 +47,9 @@ const Glossary = () => {
                         <input
                             className='glossaryInput'
                             type="search"
+
                             placeholder='Search'
+
                             onChange={handleChange}
                             value={searchInput} />
                     </div>
@@ -100,7 +104,7 @@ const Glossary = () => {
                         >History</Button></li>
                     </ul>
                 </div>
-                <GlossaryDefinition definitions={GDefShow} />
+                {GDefShow ? <GlossaryDefinition definitions={GDefShow} /> : <GlossaryDefault />}
             </div>
         </div >
     )

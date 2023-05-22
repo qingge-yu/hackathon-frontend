@@ -25,6 +25,7 @@
 }
 
 .glossaryTop>h1 {
+    position: absolute;
     margin: 0;
 }
 
@@ -38,7 +39,6 @@
     border: 0;
     box-shadow: 0px 2px 2px grey;
     /* flex: 2; */
-
 }
 
 .gItem {
