@@ -49,8 +49,10 @@ const GlossaryDefinition = ({ definitions }) => {
 
     return (
         <div className="glossary-component">
-            <h1>{definitions}</h1>
-            <p>{Gdefinitions[definitions]}</p>
+            <div className="glossaryComponentText">
+                <h2>{definitions}</h2>
+                <p>{Gdefinitions[definitions]}</p>
+            </div>
             <img src={imagePaths[definitions]} alt="background img" className="glossaryBG" />
         </div>
     )
