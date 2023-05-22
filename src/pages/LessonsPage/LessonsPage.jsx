@@ -24,7 +24,7 @@ const LessonsPage = ({ user, modalShow, setModalShow }) => {
           onHide={() => setModalShow(false)}
         />
         <LessonCarousel modalShow={modalShow} setModalShow={setModalShow}/>
-        {/* <LessonBrowser modalShow={modalShow} setModalShow={setModalShow}/> */}
+        <LessonBrowser modalShow={modalShow} setModalShow={setModalShow}/>
       </div>
     </>
   )
