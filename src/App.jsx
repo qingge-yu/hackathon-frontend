@@ -42,15 +42,15 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  const URL = "http://localhost:4000/data/"
+//   const URL = "http://localhost:4000/data/"
 
-  const getData = async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setData(data);
-};
+//   const getData = async () => {
+//     const response = await fetch(URL);
+//     const data = await response.json();
+//     setData(data);
+// };
   
-  useMemo(() => {getData()}, [language]);
+//   useMemo(() => {getData()}, [language]);
 
   return (
     <>

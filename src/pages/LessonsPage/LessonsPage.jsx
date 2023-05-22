@@ -8,12 +8,12 @@ const LessonsPage = ({ user, modalShow, setModalShow }) => {
 
 
   return (
-    <body>
+    <>
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       />
       <main className={styles.container}>
         {/* <Button variant="primary" onClick={() => setModalShow(true)}>
@@ -26,7 +26,7 @@ const LessonsPage = ({ user, modalShow, setModalShow }) => {
         <LessonCarousel modalShow={modalShow} setModalShow={setModalShow}/>
         {/* <LessonBrowser modalShow={modalShow} setModalShow={setModalShow}/> */}
       </main>
-    </body>
+    </>
   )
 }
 

@@ -1,128 +1,137 @@
 import './LessonBrowser.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 
 const LessonBrowser = (props) => {
-  console.log(props)
   return ( 
     <div className='browserbody'>
-    
-<div class="window">
-  <header class="windowheader">
-    <div class="window-actions">
-      <button aria-label="close"></button>
-      <button aria-label="minimize"></button>
-      <button aria-label="maximize"></button>
-    </div>
-    <div class="tabs">
-      <div class="tab">
-        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-          <circle cx="9" cy="9" r="9" fill="var(--red-0)"></circle>
-          <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="var(--orange-0)"></path>
-          <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="var(--yellow-0)"></path>
-        </svg>New Tab
+    <div></div>
+<div className="window">
+  <header className="windowheader">
+    <div className="tabs">
+      <div className="tab">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.14277 3.67742C7.79189 1.51694 6.96431 0 6.00121 0C5.03811 0 4.21053 1.51694 3.85965 3.67742H8.14277Z" fill="#6D6E70"/>
+        <path d="M3.67816 6C3.67816 6.5371 3.7072 7.05242 3.75802 7.54839H8.24198C8.2928 7.05242 8.32184 6.5371 8.32184 6C8.32184 5.4629 8.2928 4.94758 8.24198 4.45161H3.75802C3.7072 4.94758 3.67816 5.4629 3.67816 6Z" fill="#6D6E70"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.71204 0.251613C9.44223 0.764516 10.8433 2.03468 11.5354 3.67742H8.92196C8.70901 2.30081 8.30248 1.06935 7.71204 0.251613ZM0.46703 3.67742C1.15668 2.03468 2.56019 0.764516 4.28796 0.251613C3.69752 1.06935 3.29099 2.30081 3.08046 3.67742H0.46703ZM9.01875 4.45161H11.7943C11.925 4.94758 12 5.4629 12 6C12 6.5371 11.925 7.05242 11.7919 7.54839H9.01875C9.06957 7.04032 9.09861 6.52016 9.09861 6C9.09861 5.47984 9.06957 4.95968 9.01875 4.45161ZM2.98367 4.45161C2.93285 4.95968 2.90381 5.47984 2.90381 6C2.90381 6.52016 2.93285 7.04032 2.98125 7.54839H0.208106C0.077435 7.05242 0 6.5371 0 6C0 5.4629 0.077435 4.94758 0.208106 4.45161H2.98367ZM11.5378 8.32258C10.8457 9.96532 9.44223 11.2355 7.71446 11.7484C8.3049 10.9306 8.71143 9.69919 8.92438 8.32258H11.5378ZM4.29038 11.7484C2.56019 11.2355 1.1591 9.96532 0.46703 8.32258H3.08046C3.29341 9.69919 3.69994 10.9306 4.29038 11.7484Z" fill="#BABABC"/>
+        <path d="M3.85965 8.32258C4.21053 10.4831 5.03811 12 6.00121 12C6.96431 12 7.79189 10.4831 8.14277 8.32258H3.85965Z" fill="#6D6E70"/>
+      </svg>New Tab 
         <button aria-label="close tab" onClick={() => props.setModalShow(true)}>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
-            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
           </svg>
         </button>
       </div>
       <button aria-label="open new tab"> 
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
-          <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M2.5 8H13.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+          <path d="M8 2.5V13.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+    <div className="window-actions">
+      <button className="carrot" aria-label="carrot">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 6L8 11L3 6" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div></div>
+      <button aria-label="minimize">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.5 8H13.5" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button aria-label="maximize">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.5 5H2.5C2.22386 5 2 5.22386 2 5.5V12.5C2 12.7761 2.22386 13 2.5 13H11.5C11.7761 13 12 12.7761 12 12.5V5.5C12 5.22386 11.7761 5 11.5 5Z" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 3H13.5C13.6326 3 13.7598 3.05268 13.8536 3.14645C13.9473 3.24021 14 3.36739 14 3.5V11" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button aria-label="close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 3.5L3.5 12.5" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.5 12.5L3.5 3.5" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
     </div>
   </header>
-  <nav class="toolbar">
+  <nav className="toolbar">
+    <div className="toolbar-left">
     <button aria-label="go back">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M15.1875 9H2.8125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M7.875 3.9375L2.8125 9L7.875 14.0625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.875 10H3.125" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8.75 4.375L3.125 10L8.75 15.625" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
     </button>
     <button aria-label="go forward">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M2.8125 9H15.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M10.125 3.9375L15.1875 9L10.125 14.0625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.125 10H16.875" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.25 4.375L16.875 10L11.25 15.625" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
+
     </button>
     <button aria-label="reload">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M12.3868 7.01123H15.7618V3.63623" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M13.3752 13.3752C12.5099 14.2406 11.4074 14.8299 10.2071 15.0686C9.00686 15.3074 7.76276 15.1848 6.63215 14.7165C5.50153 14.2482 4.53517 13.4551 3.85528 12.4376C3.17539 11.4201 2.8125 10.2238 2.8125 9C2.8125 7.77623 3.17539 6.57994 3.85528 5.56241C4.53517 4.54488 5.50153 3.75182 6.63215 3.2835C7.76276 2.81518 9.00686 2.69265 10.2071 2.93139C11.4074 3.17014 12.5099 3.75944 13.3752 4.62478L15.7617 7.01126" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.7656 7.78906H17.5156V4.03906" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.8594 14.8594C13.8982 15.8214 12.6732 16.4768 11.3394 16.7425C10.0056 17.0082 8.62301 16.8724 7.36644 16.3522C6.10987 15.832 5.03581 14.9508 4.28013 13.8201C3.52445 12.6894 3.12109 11.36 3.12109 10C3.12109 8.64002 3.52445 7.31058 4.28013 6.17988C5.03581 5.04917 6.10987 4.16798 7.36644 3.64779C8.62301 3.12761 10.0056 2.99179 11.3394 3.25752C12.6732 3.52324 13.8982 4.17858 14.8594 5.14063L17.5157 7.78907" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
     <button aria-label="homepage">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M15.1866 15.1875V8.12383C15.1866 8.04546 15.1703 7.96795 15.1386 7.89627C15.1069 7.8246 15.0605 7.76034 15.0025 7.70762L9.37714 2.59343C9.2736 2.4993 9.13868 2.44714 8.99874 2.44714C8.8588 2.44715 8.72388 2.49932 8.62034 2.59346L2.99573 7.70762C2.93775 7.76034 2.89142 7.8246 2.85972 7.89627C2.82802 7.96794 2.81165 8.04544 2.81165 8.12381V15.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M1.12415 15.1875H16.8741" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M10.6863 15.1869V11.2494C10.6863 11.1002 10.627 10.9571 10.5215 10.8516C10.416 10.7462 10.273 10.6869 10.1238 10.6869H7.87378C7.7246 10.6869 7.58152 10.7462 7.47603 10.8516C7.37054 10.9571 7.31128 11.1002 7.31128 11.2494V15.1869" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14.6719 6.5623L8.42187 0.882614C8.30666 0.777207 8.15616 0.71875 8 0.71875C7.84384 0.71875 7.69334 0.777207 7.57812 0.882614L1.32812 6.5623C1.26523 6.6217 1.21486 6.69308 1.17998 6.77224C1.14509 6.8514 1.1264 6.93674 1.125 7.02324V14.2498C1.125 14.4156 1.19085 14.5745 1.30806 14.6917C1.42527 14.809 1.58424 14.8748 1.75 14.8748H14.25C14.4158 14.8748 14.5747 14.809 14.6919 14.6917C14.8092 14.5745 14.875 14.4156 14.875 14.2498V7.02324C14.8736 6.93674 14.8549 6.8514 14.82 6.77224C14.7851 6.69308 14.7348 6.6217 14.6719 6.5623Z" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
     </button>
-    <div class="search">
-      <input className='browserText' type="text" placeholder="Search with QuackQuackGo or enter address"/>
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M8.15613 14.0625C11.4181 14.0625 14.0624 11.4182 14.0624 8.15625C14.0624 4.89432 11.4181 2.25 8.15613 2.25C4.8942 2.25 2.24988 4.89432 2.24988 8.15625C2.24988 11.4182 4.8942 14.0625 8.15613 14.0625Z" stroke="var(--cream-0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M12.3323 12.3329L15.7495 15.7501" stroke="var(--cream-0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
     </div>
-    <button>
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M9 5.625H15.1875C15.3367 5.625 15.4798 5.68426 15.5852 5.78975C15.6907 5.89524 15.75 6.03832 15.75 6.1875V14.0625C15.75 14.2117 15.6907 14.3548 15.5852 14.4602C15.4798 14.5657 15.3367 14.625 15.1875 14.625H2.8125C2.66345 14.6246 2.52063 14.5652 2.41523 14.4598C2.30984 14.3544 2.25044 14.2116 2.25 14.0625V7.3125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M6.5625 7.3125H2.25V4.5C2.25 4.35082 2.30926 4.20774 2.41475 4.10225C2.52024 3.99676 2.66332 3.9375 2.8125 3.9375H6.5625C6.68421 3.9375 6.80263 3.97697 6.9 4.05L9 5.625L6.9 7.2C6.80263 7.27303 6.68421 7.3125 6.5625 7.3125Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <div className="search">
+      <input className='browserText' type="text" placeholder="https://yourlink.com/example"/>
+      <svg className='lock' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.125 5.25H9.5625V3.5625C9.5625 1.59844 7.96406 0 6 0C4.03594 0 2.4375 1.59844 2.4375 3.5625V5.25H1.875C1.25391 5.25 0.75 5.75391 0.75 6.375V10.875C0.75 11.4961 1.25391 12 1.875 12H10.125C10.7461 12 11.25 11.4961 11.25 10.875V6.375C11.25 5.75391 10.7461 5.25 10.125 5.25ZM7.6875 5.25H4.3125V3.5625C4.3125 2.63203 5.06953 1.875 6 1.875C6.93047 1.875 7.6875 2.63203 7.6875 3.5625V5.25Z" fill="#2ACB42"/>
       </svg>
-    </button>
-    <button aria-label="downloads">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M6.04688 7.73511L9 10.6875L11.9531 7.73511" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M9 2.8125V10.6854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M15.1875 10.6875V14.625C15.1875 14.7742 15.1282 14.9173 15.0227 15.0227C14.9173 15.1282 14.7742 15.1875 14.625 15.1875H3.375C3.22582 15.1875 3.08274 15.1282 2.97725 15.0227C2.87176 14.9173 2.8125 14.7742 2.8125 14.625V10.6875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <svg className='google' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.8667 6.13331C11.8667 5.71731 11.8294 5.31731 11.7601 4.9333H6.23471V7.20531H9.39205C9.25338 7.93597 8.83738 8.55464 8.21338 8.97064V10.448H10.1174C11.2267 9.42397 11.8667 7.91997 11.8667 6.13331Z" fill="#4285F4"/>
+        <path d="M6.23468 11.8666C7.81868 11.8666 9.14672 11.344 10.1174 10.448L8.21338 8.97064C7.69071 9.32264 7.02401 9.53596 6.23468 9.53596C4.70934 9.53596 3.41334 8.50663 2.94934 7.11996H0.997339V8.63463C1.96267 10.5493 3.94134 11.8666 6.23468 11.8666Z" fill="#34A853"/>
+        <path d="M2.94938 7.11461C2.83204 6.76261 2.76271 6.38928 2.76271 5.99994C2.76271 5.61061 2.83204 5.23728 2.94938 4.88528V3.37061H0.997376C0.597376 4.15994 0.368042 5.05061 0.368042 5.99994C0.368042 6.94928 0.597376 7.83995 0.997376 8.62928L2.51738 7.44528L2.94938 7.11461Z" fill="#FBBC05"/>
+        <path d="M6.23468 2.4693C7.09868 2.4693 7.86668 2.76797 8.48001 3.34397L10.16 1.66397C9.14135 0.714635 7.81868 0.133301 6.23468 0.133301C3.94134 0.133301 1.96271 1.45061 0.997376 3.37061L2.94938 4.88528C3.41338 3.49861 4.70934 2.4693 6.23468 2.4693Z" fill="#EA4335"/>
       </svg>
-    </button>
-    <button aria-label="history, bookmarks and more">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M5.625 2.8125H3.375C3.06434 2.8125 2.8125 3.06434 2.8125 3.375V14.625C2.8125 14.9357 3.06434 15.1875 3.375 15.1875H5.625C5.93566 15.1875 6.1875 14.9357 6.1875 14.625V3.375C6.1875 3.06434 5.93566 2.8125 5.625 2.8125Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M2.8125 5.625H6.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M9 2.8125H6.75C6.43934 2.8125 6.1875 3.06434 6.1875 3.375V14.625C6.1875 14.9357 6.43934 15.1875 6.75 15.1875H9C9.31066 15.1875 9.5625 14.9357 9.5625 14.625V3.375C9.5625 3.06434 9.31066 2.8125 9 2.8125Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M6.1875 12.375H9.5625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M12.2821 2.63254L10.1088 3.21489C9.80869 3.29529 9.63061 3.60373 9.71102 3.90381L12.6227 14.7705C12.7031 15.0706 13.0116 15.2487 13.3117 15.1683L15.485 14.5859C15.7851 14.5055 15.9632 14.1971 15.8828 13.897L12.971 3.03029C12.8906 2.73022 12.5822 2.55214 12.2821 2.63254Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M12.0403 12.5971L15.3003 11.7236" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M10.2935 6.07713L13.5535 5.20361" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <svg className='downloads' width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 6.5L13 3.5M13 3.5L10 0.5M13 3.5H9.5C8.16958 3.5004 6.87694 3.94252 5.82495 4.75697C4.77295 5.57141 4.02114 6.71209 3.6875 8M11 10.5H1.5C1.36739 10.5 1.24021 10.4473 1.14645 10.3536C1.05268 10.2598 1 10.1326 1 10V2.5" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
+
+    {/* <button aria-label="history, bookmarks and more"> */}
+      <svg className='bkstar' width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.275 11.9188L10.425 13.9188C10.8312 14.175 11.3312 13.7938 11.2125 13.325L10.3 9.73752C10.2753 9.63808 10.2792 9.53369 10.3113 9.43638C10.3434 9.33907 10.4023 9.2528 10.4812 9.18752L13.3062 6.83127C13.675 6.52502 13.4875 5.90627 13.0062 5.87502L9.31875 5.63752C9.21813 5.63166 9.1214 5.59663 9.04038 5.53669C8.95935 5.47675 8.89754 5.39451 8.8625 5.30002L7.4875 1.83752C7.4511 1.73745 7.38479 1.65102 7.29758 1.58994C7.21037 1.52886 7.10647 1.49609 7 1.49609C6.89352 1.49609 6.78963 1.52886 6.70241 1.58994C6.6152 1.65102 6.54889 1.73745 6.5125 1.83752L5.1375 5.30002C5.10245 5.39451 5.04064 5.47675 4.95962 5.53669C4.87859 5.59663 4.78186 5.63166 4.68125 5.63752L0.993747 5.87502C0.512497 5.90627 0.324997 6.52502 0.693747 6.83127L3.51875 9.18752C3.59771 9.2528 3.65661 9.33907 3.68868 9.43638C3.72075 9.53369 3.72467 9.63808 3.7 9.73752L2.85625 13.0625C2.7125 13.625 3.3125 14.0813 3.79375 13.775L6.725 11.9188C6.8072 11.8665 6.90259 11.8387 7 11.8387C7.09741 11.8387 7.1928 11.8665 7.275 11.9188Z" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {/* </button> */}
+
+
+
+    </div>
+    <div className="toolbar-right">
+    <button aria-label="extensions">
+    <svg width="16" height="16" viewBox="0 0 16 16"  fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.00005 15.8749C3.83429 15.8749 3.67532 15.809 3.55811 15.6918C3.4409 15.5746 3.37505 15.4156 3.37505 15.2499V11.9139C3.03216 12.0775 2.65215 12.1476 2.27348 12.1171C1.95285 12.0935 1.64136 11.9996 1.36117 11.8419C1.08097 11.6843 0.838971 11.4668 0.652385 11.205C0.465798 10.9432 0.339213 10.6435 0.28164 10.3272C0.224066 10.0109 0.236919 9.68578 0.319283 9.37501C0.401647 9.06425 0.551498 8.77546 0.758171 8.52919C0.964844 8.28293 1.22326 8.08525 1.51502 7.95023C1.80679 7.8152 2.12473 7.74614 2.44621 7.74797C2.7677 7.74979 3.08484 7.82246 3.37505 7.9608V4.62486C3.37505 4.4591 3.4409 4.30013 3.55811 4.18292C3.67532 4.06571 3.83429 3.99986 4.00005 3.99986H7.64848C7.48492 3.65698 7.41485 3.27697 7.44536 2.8983C7.46892 2.57767 7.56286 2.26618 7.7205 1.98598C7.87814 1.70579 8.0956 1.46379 8.35741 1.2772C8.61922 1.09061 8.91894 0.96403 9.23524 0.906456C9.55153 0.848883 9.87663 0.861735 10.1874 0.9441C10.4982 1.02646 10.787 1.17632 11.0332 1.38299C11.2795 1.58966 11.4772 1.84808 11.6122 2.13984C11.7472 2.4316 11.8163 2.74954 11.8144 3.07103C11.8126 3.39252 11.7399 3.70965 11.6016 3.99986H15.25C15.4158 3.99986 15.5748 4.06571 15.692 4.18292C15.8092 4.30013 15.875 4.4591 15.875 4.62486V7.9608C15.5322 7.79724 15.1522 7.72716 14.7735 7.75768C14.4529 7.78123 14.1414 7.87518 13.8612 8.03282C13.581 8.19046 13.339 8.40792 13.1524 8.66973C12.9658 8.93154 12.8392 9.23126 12.7816 9.54755C12.7241 9.86385 12.7369 10.189 12.8193 10.4997C12.9016 10.8105 13.0515 11.0993 13.2582 11.3455C13.4648 11.5918 13.7233 11.7895 14.015 11.9245C14.3068 12.0595 14.6247 12.1286 14.9462 12.1268C15.2677 12.1249 15.5848 12.0523 15.875 11.9139V15.2499C15.875 15.4156 15.8092 15.5746 15.692 15.6918C15.5748 15.809 15.4158 15.8749 15.25 15.8749H4.00005Z" fill="#6D6E70"/>
+    </svg>
+
     </button>
     <button aria-label="show sidebars">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M14.3438 3.09375H3.65625C3.34559 3.09375 3.09375 3.34559 3.09375 3.65625V14.3438C3.09375 14.6544 3.34559 14.9062 3.65625 14.9062H14.3438C14.6544 14.9062 14.9062 14.6544 14.9062 14.3438V3.65625C14.9062 3.34559 14.6544 3.09375 14.3438 3.09375Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M9 3.09375V14.9062" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M9.84326 3.09375L14.9062 8.15666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M9 6.18787L14.9063 12.0941" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M9 10.1254L13.7808 14.9062" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </button>
+    <svg width="16" height="12" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 0.75V13.25H14.875C15.2202 13.25 15.5 12.9702 15.5 12.625V1.375C15.5 1.02982 15.2202 0.75 14.875 0.75H11Z" fill="#6D6E70"/>
+      <path d="M11 0.75V13.25M11 0.75H1.125M11 0.75H14.875M11 13.25H1.125M11 13.25H14.875M1.125 0.75H14.875M1.125 0.75C0.779822 0.75 0.5 1.02982 0.5 1.375V12.625C0.5 12.9702 0.779822 13.25 1.125 13.25M14.875 0.75C15.2202 0.75 15.5 1.02982 15.5 1.375V12.625C15.5 12.9702 15.2202 13.25 14.875 13.25M14.875 13.25H1.125" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
     <button aria-label="account">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M9 11.25C10.5533 11.25 11.8125 9.9908 11.8125 8.4375C11.8125 6.8842 10.5533 5.625 9 5.625C7.4467 5.625 6.1875 6.8842 6.1875 8.4375C6.1875 9.9908 7.4467 11.25 9 11.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M4.48584 14.0185C4.90955 13.1854 5.55552 12.4859 6.35224 11.9973C7.14895 11.5086 8.06534 11.25 8.99996 11.25C9.93458 11.25 10.851 11.5086 11.6477 11.9972C12.4444 12.4859 13.0904 13.1854 13.5141 14.0185" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
+    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 17C15.7614 17 18 14.7614 18 12C18 9.23858 15.7614 7 13 7C10.2386 7 8 9.23858 8 12C8 14.7614 10.2386 17 13 17ZM13 17C11.3379 17 9.70838 17.4592 8.2919 18.3287C6.87542 19.1981 5.72736 20.4428 4.97498 21.9248M13 17C14.662 17 16.2916 17.4592 17.708 18.3287C19.1245 19.1981 20.2726 20.4428 21.025 21.9248M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z" stroke="#6D6E70" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
     </button>
     <button aria-label="menu">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <path d="M2.8125 9H15.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M2.8125 4.5H15.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M2.8125 13.5H15.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
+    <FontAwesomeIcon icon={faEllipsisVertical} size="2xl" style={{color: "#6d6e70",}} /> 
     </button>
+    </div>
   </nav>
   <main className='windowmain'>
-    <h1>
-      <svg width="64" height="64" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
-        <circle cx="9" cy="9" r="9" fill="var(--red-0)"></circle>
-        <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="var(--orange-0)"></path>
-        <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="var(--yellow-0)"></path>
-      </svg>Gruvfox
-    </h1>
+  <img className="mainwindowimg" src="https://s3-alpha-sig.figma.com/img/4fb1/c415/7066751ef294615e7a96901f29ff268d?Expires=1685923200&Signature=lXjePuz24wxS8Kem5wmOtmk~G~Vvb8XNhyoL~Qgz4yT7bghflqzeoJvfjM-e2vCbPTDibB8s5nK-o0--5csqTAYy6XvuXuXarPiaep2EmaUUFunPCfd-AqyyXeOB0Eh23W2YJQDtXW7Q8x7hgenHYjFXCTNjMQFdd5dyebikP2qfamoCPt7T-xjg-oGX0R6wprZDxxUYXn025evPqlmIGPqIALz6yzVhY5CAUeTLYqAEVkZXsvZp9lywJvIz5Ugcrk4HGBhS9kUIjP~4kSn2Zxqld1A60~Oaa2LJKgloGkJOGwmWhPDy8zpu1es-nzI4QsJR3bba1R8UdjEBCVVf9A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
   </main>
 </div>
     </div>
@@ -130,3 +139,5 @@ const LessonBrowser = (props) => {
 }
  
 export default LessonBrowser
+
+// xmlns:xlink="http://www.w3.org/1999/xlink"

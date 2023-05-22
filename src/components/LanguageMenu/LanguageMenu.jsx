@@ -14,15 +14,15 @@ export default function BasicSelect({ setLanguage, language }) {
     return (
         <Box sx={{ minWidth: 150 }}>
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">English</InputLabel>
+                <InputLabel id="demo-simple-select-label"></InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={language}
+                    value="English"
                     label="Language"
                     onChange={handleChange}
                 >
-                    <MenuItem value="english">English</MenuItem>
+                    <MenuItem value="en">English</MenuItem>
                     <MenuItem value="es">Español</MenuItem>
                     <MenuItem value="ar">عربي</MenuItem>
                     <MenuItem value="ja">日本語</MenuItem>

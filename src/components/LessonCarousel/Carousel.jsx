@@ -151,7 +151,7 @@ const LessonCarousel = ({ user, modalShow, setModalShow }) => {
         </Carousel>
       </div>
       {lessonOne ? (<LessonBrowser modalShow={modalShow} setModalShow={setModalShow}/>):<></>}
-      {/* {lessonOne ? (<LessonOneSlides />):<></>} */}
+      {lessonOne ? (<LessonOneSlides />):<></>}
     </>
    )
 }
